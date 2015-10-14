@@ -1,0 +1,388 @@
+
+.home-bottom-more-info {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+.more-info-front-special {
+    margin-bottom: 40px;
+}
+:lang(sv) .home-facilities-intro-title {
+    line-height: 1.2em;
+}
+.more-info-form-wrapper .form-group {
+    margin-bottom: 10px;
+}
+.more-info-form-wrapper .head-line {
+    margin-bottom: 15px;
+}
+.more-info-form-wrapper .privacy-note {
+    float: left;
+    width: 70%; 
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.more-info-form-wrapper .submit-button {
+    float: left;
+    display: block;
+}
+.with-image {
+    position: relative;
+    padding-left: 148px;
+    min-height: 128px;
+    margin-top: 20px;
+}
+.index-image {
+    background: url(/theme/images/nn-drug-rehab-index-parts-sprite.jpg) no-repeat 0 0;
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.index-image-1 {
+    background-position: 0 0;
+}
+.index-image-2 {
+    background-position: 0 -128px;
+}
+.index-image-3 {
+    background-position: 0 -256px;
+}
+.index-image-4 {
+    background-position: 0 -384px;
+}
+.index-image-5 {
+    background-position: 0 -512px;
+}
+
+@media (max-width: 767px) {
+    .what-narconon-grads-say {
+        background: #f2f2f2;
+        padding-top: 1px;
+    }
+    .home-facilities-intro-title {
+        margin-top: 0;
+    }
+    .home-locations-section .fso-custom-slider-wrapper {
+        position: relative;
+    }
+    .home-locations-section .slide-arrow-holder {
+        top: 0;
+        bottom: 0;
+    }
+    .slide-arrow-holder .arrow-bg {
+        top: 0 !important;
+        bottom: 24px !important;
+        position: relative;
+    }
+    .life-back-text-1 img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 420px) {
+    .more-info-front-special h2.intro-para-title {
+        margin-top: 0;
+        font-size: 24px;
+    }
+}
+@media (max-width: 991px) and (min-width: 767px) {
+    .more-info-wrapper .subscribe-more-info-form label,
+    .more-info-wrapper .more-info-form label {
+        font-size: 16px;
+    }
+}
+
+.latest-news {
+    text-align: left !important;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.follow-us-text {
+    position: relative;
+    top: -4px;
+}
+
+#form-subscribe.success-message:after {
+    content: "Thank you for subscribing.";
+}
+
+.intro-para {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro-para p {
+    font-size: 1.1em;
+    color: #565656;
+}
+
+.intro-para-title {
+    text-align: center;
+}
+
+.intro-para .video-backdrop {
+    background: url(/theme/images/intro-film-backdrop.jpg) center no-repeat;
+    background-size: cover;
+    margin: 0 calc(50% - 50vw);
+}
+
+.intro-para .video-container-16-9 {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.intro-para .video-inner {
+    padding-bottom: 56.25%;
+}
+
+.intro-para .video-js {
+    position: absolute;
+}
+
+.intro-para .inline-title {
+    font-size: 1.8em;
+}
+
+.light-bandit {
+    background: #f8f8f8;
+}
+.light-bandit h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+:lang(hu) .light-bandit h4 {
+    line-height: 1.2em;
+}
+.light-bandit p {
+    color: #565656;
+}
+.light-bandit .index-image {
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+@media (min-width: 768px) and (max-width: 860px) {
+    .light-bandit .index-image {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.light-bandit .read-more {
+    text-align: center;
+    white-space: nowrap;
+}
+.pull-quote-standing-by {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+@media (max-width: 420px) {
+    .pull-quote-standing-by {
+        font-size: 1.4em;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .front .home-page-yellow-quote {
+        padding-bottom: 10px;
+    }
+}
+
+arrow {
+    height: auto;
+    line-height: 100px;
+    margin-top: -50px;
+}
+
+p.steps-leader {
+    font-weight: bold;
+}
+p.steps-trailer {
+    text-align: center;
+    font-size: 1.4em;
+}
+.mini-help-block {
+    float: right;
+    margin: 10px 35px;
+    margin-right: -120px;
+    width: 250px;
+    border-top: 4px solid #85925D;
+    border-bottom: 2px solid #eee;
+    background: #F8F8F8;
+    padding: 10px;
+    text-align: center;
+}
+.mini-help-block a {
+    color: inherit;
+}
+.mini-help-block .mini-help-block-get-help {
+    font-size: 18px;
+}
+.mini-help-block-call-now {
+    display: block;
+    font-size: 22px;
+    line-height: 1.1;
+    margin-top: 11px;
+    margin-bottom: 10px;
+     
+}
+
+.mini-center-name {
+    padding: 0 10px 5px 10px;
+    font-size: 1.4em;
+    line-height: 1.2;
+}
+
+a.mini-center-changer-link {
+    text-align: center;
+    display: block;
+    color: #999;
+    font-size: 0.9em;
+    padding-bottom: 12px;
+    line-height: 1.3;
+}
+
+.mini-help-block-call-now .mini-call {
+    font-size: 16px;
+}
+.mini-help-block-call-now .mini-phone {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+@media (max-width: 1080px) {
+    .mini-help-block {
+        margin-right: calc(50% - 50vw + 20px);
+    }
+}
+
+@media (max-width: 640px) {
+    .mini-help-block {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.mini-live-chat-form {
+    position: relative;
+    background-color: #E4E9D4;
+    border-top: 4px solid #85925D;
+    color: #85925D;
+    padding: 5px 8px 5px 50px;
+    line-height: 1;
+    cursor: pointer;
+}
+[dir="rtl"] .mini-live-chat-form {
+    padding: 5px 50px 5px 8px;
+}
+.mini-live-chat-form:hover {
+    background-color: #EEF1E6;
+}
+.mini-more-info-logo {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 50px;
+}
+.mini-clickhere {
+    font-size: 10px;
+    padding: 2px 0;
+    float: left;
+}
+:lang(no) .mini-clickhere {
+    text-align: left;
+    max-width: 54px;
+}
+.mini-ava {
+    float: right;
+    display: inline-block;
+    background: #ccc;
+    color: #fafafa;
+    font-size: 10px;
+    padding: 2px 6px;
+    opacity: 0.6;
+    font-family: 'Michroma', 'Ubuntu', Arial, Verdana, sans-serif;
+}
+:lang(nl) .mini-ava {
+    font-size: 9px;
+}
+.mini-live-chat-form.activated .mini-ava {
+    background: #85925d;
+    opacity: 1;
+}
+
+
+.mini-assistance {
+    clear: both;
+    color: #000;
+    font-size: 24px;
+    text-align: left;
+}
+:lang(he) .mini-assistance {
+    font-size: 23px;
+}
+:lang(hu) .mini-assistance {
+    font-size: 20px;
+}
+:lang(nl) .mini-assistance {
+    font-size: 19px;
+}
+
+.mini-live-chat-form.activated .mini-assistance {
+    font-size: 21px;
+    white-space: nowrap;
+}
+
+.mini-help-block .mini-assistance:after {
+    top: 3px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mini-chat {
+    width: 28px;
+    height: 28px;
+}
+
+.front #habla_beta_container_do_not_rely_on_div_classes_or_names,
+.live-chat-form-wrapper-init .live-chat-form.down {
+    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+}
+.front #habla_beta_container_do_not_rely_on_div_classes_or_names.active-now {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    -ms-transform: none;        
+}
+.full-center-listing-link {
+    font-size: 1.1em;
+    margin-top: 22px;
+    display: block;
+}
+.full-center-listing-link:after {
+    top: 2px;
+}
+
+@media (max-width: 420px) {
+    .home-wrapper .more-info-front-special .home-global-success-title {
+        margin-top: 20px;
+    }
+}
+:lang(en-gb) h2.intro-para-title {
+    margin-top: 5px;
+}

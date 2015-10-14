@@ -37,7 +37,6 @@
     <link rel="stylesheet" type="text/css" href="theme/css/bodyobjects.css"/>
     <link rel="stylesheet" type="text/css" href="theme/css/videos-box.css"/>
     <link rel="stylesheet" type="text/css" href="theme/css/footer.css"/>
-    <link rel="stylesheet" type="text/css" href="theme/css/contact_form.css"/>
 
     <style>
         .narconon-infowindow {
@@ -113,12 +112,15 @@
 
     <style>
         #main_parallax_parent {
-        	height: 100%;  
+        	height: 100%;
+             
         }
+
         #main_parallax_parent .parallax__layer--back,
         #main_parallax_parent .parallax__layer--back2 {
         	display: none;
         }
+
         #main_parallax_parent .parallax__layer--base {
         	height: 100%;
         	position: relative;
@@ -128,6 +130,7 @@
         	-o-transform: none;
         	-ms-transform: none;
         }
+
         #main_parallax_parent #home_anim_header {
         	position: relative;
         	overflow: hidden;
@@ -155,6 +158,7 @@
         		padding-bottom: 0;
         	}
         }
+
         #home_anim_header {
         	-webkit-touch-callout: none;
         	-webkit-user-select: none;
@@ -163,11 +167,13 @@
         	-ms-user-select: none;
         	user-select: none;
         }
+
         #home_anim_header:before {
         	 
         	content: '';
         	display: table;
         }
+
         #animated_slide_container {
         	position: relative;
         	max-width: 720px;
@@ -177,7 +183,10 @@
         	line-height: 1.24;
         	-webkit-perspective: 1000px;
         	perspective: 1000px;
+
+        	
         }
+
         #home_anim_header .right-arrow,
         #home_anim_header .left-arrow {
         	position: absolute;
@@ -193,11 +202,13 @@
         	transition: color 0.1s linear, background-color 0.1s linear;
         	-webkit-transition: color 0.1s linear, background-color 0.1s linear;
         }
+
         #home_anim_header .right-arrow:hover,
         #home_anim_header .left-arrow:hover {
         	color: rgba(255,255,255,1);
         	background-color: rgba(255,255,255,0.2);
         }
+
         #home_anim_header .left-arrow {
         	left: -0.75em;  
         }
@@ -209,6 +220,7 @@
         	line-height: 1em;
         	margin-top: -0.5em;
         }
+
         #home_anim_header .right-arrow {
         	right: -0.75em;  
         }
@@ -220,13 +232,17 @@
         	line-height: 1em;
         	margin-top: -0.5em;
         }
+
         .animated-slide {
         	position: absolute;
         	top: 0;
         	bottom: 0;
         	width: 100%;
         	font-size: 20px;
+
+        	
         }
+
         :lang(it) .animated-slide,
         :lang(zh) .animated-slide,
         :lang(fr) .animated-slide {
@@ -235,6 +251,7 @@
         :lang(el) .animated-slide {
         	font-size: 18px;
         }
+
         @media (max-width: 767px) {
         	.animated-slide {
         		font-size: 14px;
@@ -242,19 +259,23 @@
         	:lang(fr) .animated-slide {
         		font-size: 13px;
         	}
+
         }
+
         .animated_slide_image {
         	position: absolute;
         	left: 0;
         	top: 50%;
         	margin-top: -95px;
         }
+
         @media (max-width: 800px) {
         	#home_anim_header .right-arrow,
         	#home_anim_header .left-arrow {
         		font-size: 50px;
         	}
         }
+
         @media (max-width: 800px) and (min-width: 767px) {
         	.animated-slide {
         		width: 90%;
@@ -264,6 +285,7 @@
         		font-size: 1.5em;
         	}
         }
+
         @media (max-width: 767px) {
         	.animated_slide_image {
         		left: 50%;
@@ -275,6 +297,7 @@
         		font-size: 40px;
         	}
         }
+
         .animated-slide-reversed .animated_slide_image {
         	left: auto;
         	right: 0;
@@ -286,6 +309,7 @@
         		margin-right: -50px;
         	}
         }
+
         .animated_slide_image > img {
         	width: 220px;
         }
@@ -294,6 +318,7 @@
         		width: 100px;
         	}
         }
+
         .animated-slide .animated_slide_text {
         	color: white;
         	text-align: center;
@@ -308,6 +333,7 @@
         	-webkit-perspective: 1000px;
         	perspective: 1000px;
         }
+
         @media (max-width: 767px) {
         	.animated-slide .animated_slide_text {
         		margin: 0;
@@ -323,10 +349,12 @@
         		margin: 0;
         	}
         }
+
         .animated-slide-active .animated_slide_text {
         	 
         	border-radius: 3px;
         }
+
         .animated-slide-active .animated_slide_gradient_bg {
 
         	  position: absolute;
@@ -345,18 +373,22 @@
             background: radial-gradient(ellipse at center,  rgba(34,37,24,0.65) 0%,rgba(34,37,24,0) 65%,rgba(34,37,24,0) 100%);  
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6222518', endColorstr='#00222518',GradientType=1 );  
         }
+
         .animated-slide-active..animated-slide-reversed .animated_slide_gradient_bg {
         	margin-left: auto;
         	margin-right: -20%;
         }
+
         .animated-slide p {
         	margin-top: 0.5em;
         	margin-bottom: 0.5em;
         }
+
         .animated-slide .byline {
         	font-size: 0.6em;
         	margin-top: -0.5em;
         }
+
         .animated-slide-title {
         	font-size: 1.7em;
         }
@@ -368,9 +400,11 @@
         :lang(no) .animated-slide-title {
         	font-size: 1.6em;
         }
+
         .animated_slide_in {
         	position: relative;
         }
+
         .animated-slide:before {
         	content: '';
         	display: inline-block;
@@ -384,27 +418,32 @@
         	cursor: pointer;
         	width: 100%;
         }
+
         @media (max-width: 767px) {
 
         	#main_parallax_parent {
         		-webkit-transition: -webkit-transform .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         	}
+
         	.animated-slide-inner {
         		width: auto;
         		margin-left: 20px;
         		margin-right: 20px;
         		padding-top: 40px;
         	}
+
         	.animated-slide {
         		visibility: hidden;
         		opacity: 0;
         		-webkit-font-smoothing: subpixel-antialiased;
         		transition: visibility .5s ease-out .2s, opacity .3s ease-out;
         	}
+
         	.animated-slide.animated-slide-active {
         		visibility: visible;
         		transition: visibility .5s ease-out, opacity .3s ease-out, -webkit-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         	}
+
         	#animated_slide_container,
         	.animated-slide-active {
         		opacity: 1 !important;
@@ -413,9 +452,11 @@
         	#animated_slide_container {
         		-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         	}
+
         	.animated-slide-active.moving {
         		-webkit-transition: none;
         	}
+
         	body.waiting:after {
         		content: url(/theme/images/spinner-black.gif);
         	    position: fixed;
@@ -430,38 +471,48 @@
         	    pointer-events: none;
         	    -webkit-transition: opacity .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         	}
+
         	body.waiting.spinner:after {
         		opacity: 1;
         	}
+
+
         	.animated-slide-active .animated_slide_image img {
         		-webkit-transition: -webkit-transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
         			opacity .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         	}
+
         	body.waiting .animated_slide_image img {
         		-webkit-transform: scale3d(3.0, 3.0, 3.0);
         		-webkit-transition: -webkit-transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
         			opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         		opacity: 0;
         	}
+
         	#home_anim_header .right-arrow,
         	#home_anim_header .left-arrow {
         		left: 0;
         		background: none;
         		color: rgba(255, 255, 255, 0.8);
         	}
+
         	#home_anim_header .right-arrow {
         		left: auto;
         		right: 0;
         	}
+
         	#home_anim_header .right-arrow:hover,
         	#home_anim_header .left-arrow:hover {
         		background: none;
         		color: rgba(255, 255, 255, 1);	
         	}
+
         }
+
         .animated-slide-active {
         	z-index: 1;
         }
+
         #animated_slide_background {
         	position: absolute;
         	top: 0;
@@ -470,7 +521,11 @@
         	right: 0;
         	overflow: hidden;
         }
-        #animated_slide_container .animated-slide.animated-slide-active.anim-start {}
+
+        #animated_slide_container .animated-slide.animated-slide-active.anim-start {
+
+        }
+
         .animated_slide_image:before {
         	content: '';
         	position: absolute;
@@ -485,6 +540,7 @@
         .animated-slide-inner:hover .animated_slide_image:before {
         	opacity: 0.8;
         }
+
         .animated-slide-image-watch {
         	position: absolute;
         	top: 100%;
@@ -495,6 +551,7 @@
         	transform-origin: top center;
         	opacity: 0;
         }
+
         .animated-slide-image-watch span.btn-frame {
         	display: inline-block;
         	background: rgba(34, 50, 34, 0.75);
@@ -506,6 +563,7 @@
         .animated-slide-inner:hover .animated-slide-image-watch span.btn-frame {
         	outline: 3px solid rgba(255, 255, 255, 0.77)
         }
+
         .animated_slide_info {
         	color: white;
         	margin-left: 250px;
@@ -529,6 +587,7 @@
         	color: white;
         	text-decoration: none;
         }
+
         .animated-slide-info-image {
         	position: absolute;
         	top: 50%;
@@ -543,13 +602,16 @@
         .animated-slide-inner[data-vid]:hover .animated-slide-info-image {
         	border-color: #fff;
         }
+
         #animated_slide_container .animated-slide-info-image .vjs-control-bar {
         	display: none;
         }
+
         .animated_slide_info .animated-slide-image-watch {
         	position: relative;
         	text-align: inherit;
         }
+
         @media (max-width: 767px) {
         	.animated_slide_info {
         		margin-left: 0;
@@ -563,6 +625,7 @@
         		transform: scale(0.5);
         	}
         }
+
         #intro_container{
         	position: absolute;
         	bottom: 0;
@@ -570,6 +633,7 @@
             position: absolute;
         	top: 0;
         }
+
         #bg_dark {
         	width: 100%;
         	top: 0;
@@ -578,16 +642,20 @@
         	background: url(//f.edgesuite.net/imagecache/scalefit-1400x500@qa=80as=1/data/www.narconon.org/files/headers/darkbg.jpg) center;
         	background-size: cover;
         }
+
         #bg_clean {
         	width: 100%;
         	top: 0;
         	bottom: 0;
+        	 
         	position: absolute;
+        	  
         	background-size: cover;
         	background: url("/theme/images/hexagon-white.svg") center no-repeat;
         	visibility: hidden;
         	opacity: 0;
         }
+
         #answer_text {
         	font-size: 5em;
         	font-weight: 700;
@@ -599,12 +667,14 @@
         	width: 100%;
         	padding: 30px 100px 0;
         }
+
         @media (max-width: 900px) {
         	#answer_text {
         		font-size: 7vw;
         		padding: 25px 35px 0;
         	}
         }
+
         #jumping_man {
         	visibility: hidden;
         	position: absolute;
@@ -616,6 +686,7 @@
         	margin-top: -500px;
         	margin-left: -512px;
         }
+
         #expando-hex {
         	position: absolute;
         	opacity: 0;
@@ -627,6 +698,7 @@
         	height: 100%;
         	display: block;
         }
+
         #videobox-header {
         	display: none;
         	position: absolute;
@@ -679,6 +751,7 @@
         #videobox-header .video-js {
         	position: absolute;
         }
+
         #home_anim_header .anim-progress-bar {
         	position: absolute;
         	bottom: 0;
@@ -692,6 +765,7 @@
         	-webkit-transform-origin: 0 0;
         	transform-origin: 0 0;
         }
+
         #home_anim_below_legal_text {
         	background: white;
         	padding-top: 5px;
@@ -701,14 +775,17 @@
         	-webkit-transition: opacity 0.25s;
         	transition: opacity 0.25s;
         }
+
         #home_anim_header.video-enabled + #home_anim_below_legal_text .success-disclaimer {
         	opacity: 1;
         }
+
         .slide_sub_line {
         	font-size: 0.62em; 
         	letter-spacing: 0.4px;
         	padding-left: 0.2em;
         }
+
         @media (max-width: 700px) and (min-width: 610px) {
 
         	.animated-slide-inner {
@@ -716,43 +793,59 @@
         	}
 
         }
+
         @media (max-width: 700px) {
+
+        	 
+
         	#animated_slide_container {
         		-webkit-perspective: none;
             	perspective: none;
         	}
+
         	#home_anim_header .animated-slide-inner {
+        		 
         		margin-top: 138px;
         		position: relative;
         	}
+
         	#home_anim_header .animated-slide-image-watch {
         		position: static;
         	}
+
         	#home_anim_header .animated-slide .animated_slide_text {
         		padding-bottom: 15px;
         	}
+
         	#home_anim_header .animated-slide-image-watch span.btn-frame {
         		font-size: 14px;
         	}
+
         	#home_anim_header .animated-slide-title {
         		font-size: 1.6em;
         	}
+
         	#home_anim_header .animated_slide_info {
         		padding-top: 0;
-        		padding-bottom: 15px;	 
+        		padding-bottom: 15px;
+        		 
         	}
+
         	.animated-slide-info-image > img,
         	.animated_slide_image > img {
         		width: 160px !important;
         		height: auto !important;
         	}
+
         	.animated-slide .animated_slide_text {
         		perspective: 0 !important;
         		-webkit-perspective: 0 !important;
         	}
+
         	#home_anim_header .animated-slide-inner {
         		padding-top: 0;
         	}
+
         	#home_anim_header .animated-slide-info-image,
         	#home_anim_header .animated_slide_image {
         		height: auto !important;
@@ -2019,7 +2112,6 @@
             </div>
 
             <!-- Google Maps API START -->
-            <!--
             <script src="https://maps.googleapis.com/maps/api/js"></script>
             <script>
                 $(document).ready(function() {
@@ -2067,7 +2159,6 @@
                     marker.setMap(map);
                 });
             </script>
-            -->
             <!-- Google Maps API END -->
 
             <div class="extender" style="margin-top: 20px; padding-bottom: 30px; padding-top: 35px;">
@@ -2178,6 +2269,41 @@
                     <span dir="ltr"> 01435 512 460</span>
                 </div>
             </div>
+
+            <div class="gcui-responsive-width pt3 footer-blocks">
+                <div class="clearfix-640 latest-follow-links">
+                    <div class="pull-left follow-us-text">FOLLOW US</div>
+                    <div class="share-no-break pull-left">
+                         <div class="adddthis-holder">
+                             <div class="addthis_toolbox addthis_default_style addthis_32x32_style" style="position: relative; top: -6px;"><a style="margin-right: 2px;" class="addthis_button_facebook_follow at300b" data-svc="facebook" data-svc-id="narconon" title="Follow on Facebook" href="http://www.facebook.com/narconon" target="_blank" itemprop="sameAs"><span class="at4-icon-left at4-icon aticon-facebook" style="background-color:#305891 !important;"><span class="at_a11y">Follow on Facebook</span></span><span class="addthis_follow_label">Facebook</span></a><a style="margin-right: 2px;" class="addthis_button_twitter_follow at300b" data-svc="twitter" data-svc-id="narconon" title="Follow on Twitter" href="http://twitter.com/intent/follow?source=followbutton&amp;variant=1.0&amp;screen_name=narconon" target="_blank" itemprop="sameAs"><span class="at4-icon-left at4-icon aticon-twitter" style="background-color:#2ca8d2 !important;"><span class="at_a11y">Follow on Twitter</span></span><span class="addthis_follow_label">Twitter</span></a><a style="margin-right: 2px;" class="addthis_button_google_follow_follow at300b" data-svc="google_follow" data-svc-id="+Narconon" title="Follow on Google" href="https://plus.google.com/+Narconon" target="_blank" itemprop="sameAs"><span class="at4-icon-left at4-icon aticon-google_follow" style="background-color:#cf4832 !important;"><span class="at_a11y">Follow on Google</span></span><span class="addthis_follow_label">Google</span></a><a style="margin-right: 2px;" class="addthis_button_youtube_follow at300b" data-svc="youtube" data-svc-id="narconon" title="Follow on Youtube" href="http://www.youtube.com/user/narconon?sub_confirmation=1" target="_blank" itemprop="sameAs"><span class="at4-icon-left at4-icon aticon-youtube" style="background-color:#cc1f1f !important;"><span class="at_a11y">Follow on Youtube</span></span><span class="addthis_follow_label">Youtube</span></a><a style="margin-right: 2px;" class="addthis_button_instagram_follow at300b" data-svc="instagram" data-svc-id="narconon_international" title="Follow on Instagram" href="http://instagram.com/narconon_international" target="_blank" itemprop="sameAs"><span class="at4-icon-left at4-icon aticon-instagram" style="background-color:#285a85 !important;"><span class="at_a11y">Follow on Instagram</span></span><span class="addthis_follow_label">Instagram</span></a><div class="atclear"></div></div>
+                         </div>
+                    </div>
+                </div>
+                <h2 class="test-title michroma mt1 text-left nn-color latest-news">LATEST NEWS</h2>
+                <div class="row mb2 pb2 latest-news-listing">
+                    <div class="col-xs-12 col-sm-3"> 
+                        <h2><a href="/news/narconon-europe-grand-opening.html"><script>var t = '\x3ch1 class=\x22title nn-color mb0\x22\x3e\n\x3cp\x3eNarconon Europe Opens its Danish Doors to the Continent\x3c\/p\x3e\x3c\/h1\x3e'; document.writeln(t.replace(/<[^>]+>/g, '').replace(/[\n\r]+/g, ' ')); </script></a></h2>
+                         <p>A group of dignitaries and esteemed members of Europe’s most experienced drug rehabilitation community officially welcomed the new center from the stage. Each spoke with a conviction borne of the certainty that Narconon has what it takes to tackle the tremendous drug problem that faces Europe today.</p>
+                        <a class="pull-right" href="/news/narconon-europe-grand-opening.html">read article ></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">    
+                        <h2><a href="/news/narconon-united-kingdom-grand-opening.html"><script>var t = '\x3ch1 class=\x22title nn-color mb0\x22\x3e\n\x3cp\x3eNarconon United Kingdom Promises Bold New Drug Rehab Era\x3c\/p\x3e\x3c\/h1\x3e'; document.writeln(t.replace(/<[^>]+>/g, '').replace(/[\n\r]+/g, ' ')); </script></a></h2>
+                        <p>With the country suffering from a drug abuse epidemic, a new drug-free drug rehabilitation centre brings hope.</p>
+                        <a class="pull-right" href="/news/narconon-united-kingdom-grand-opening.html">read article ></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 gray-bandit">
+                        <h2>Sign up free to receive our email newsletter:</h2>
+                        <form id="form-subscribe" role="form" class="subscribe-more-info-form">
+                            <div class="form-group" style="width: 100%">
+                                <label class="required" for="email">Email</label>
+                                <input type="email" class="form-control" name="email" placeholder="" required="required">
+                            </div>
+                            <button type="submit" class="btn btn-default">Get It Now</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="home-best-section extender grey-colored">
@@ -2189,19 +2315,19 @@
                 </h3>
 
                 <div id="home_cta_boxes">
-                    <a class="box contact-us" href="#">
+                    <a class="box contact-us" href="/get-help/contact.html">
                         <div class="cta-above">need help?</div>
                         <h3>CONTACT US</h3>
                         <p> If you or someone you know has a drug or alcohol problem, contact a Narconon consultant today.</p>
                         <p> Contact&nbsp;<span class="icon-right-chevron-bold"></span></p>
                     </a>
-                    <a class="box more-info" href="#">
+                    <a class="box more-info" href="/get-help/more-info.html">
                         <div class="cta-above">request</div>
                         <h3>MORE INFO</h3>
                         <p> Fill out this form to receive a free information packet on the Narconon Programme.</p>
                         <p>Free Request&nbsp;<span class="icon-right-chevron-bold"></span></p>
                     </a>
-                    <a class="box start-today" href="#">
+                    <a class="box start-today" href="/get-help/pre-assessment-questionaire.html">
                         <div class="cta-above">ready to begin?</div>
                         <h3>START NOW</h3>
                         <p>Drug free starts here. Our goal is long-term success for each individual.</p>
@@ -2483,8 +2609,9 @@
             </div>
         </div>
     </div>
-
+	
     <script src="theme/js/_combined.js"></script>
+
     <script src="theme/js/form.js"></script>
 
     <!-- Video Carousel START-->
@@ -2950,8 +3077,8 @@
         }
     </script>
     <!-- Video Box END-->
+
     <!-- Video JS START-->
-<!--
     <script type="text/javascript">
         new function () {
         	function tick() {
@@ -2983,77 +3110,12 @@
             this.textTrackDisplay && this.textTrackDisplay.hide();
         });
     </script>
--->
     <!-- Video JS END-->
-<!--
+
     <script>
         if (window.jQuery) for (var f in documentReadyHolder) documentReadyHolder[f]($);
         window.webshim && webshim.polyfill('forms');
     </script>
--->
-    <!-- Contact Form -->
-    <div id="contact_us_form" class="fullscreen_overlay">
-        <div class="form_container">
-            <form>
-                <div class="modal-header">
-                    <button type="button" class="close" role="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h3>Personal Information</h3>
-                </div>
-                <div class="modal-body">
-                    <ul>
-                        <li>
-                            <input type="text" name="name" placeholder="Full Name" data-content="Name" />
-                        </li>
-                        <li>
-                            <input type="text" name="assoc" placeholder="School or Association" data-content="Association" />
-                        </li>
-                        <li>
-                            <input type="tel" name="phone" placeholder="Phone Number" data-content="Phone" />
-                        </li>
-                        <li>
-                            <input type="email" name="email" placeholder="Email" data-content="Email" />
-                        </li>
-                    </ul>
-                    <div class="alert alert-warning" role="alert">
-                        <span class="message_out"></span>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <p>
-                        <small><strong>Privacy Policy:</strong> We hate SPAM and promise to keep your details safe.</small>
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <div class="form_field">
-                        <button class="btn btn-primary"  role="submit" type="button">Send</button>
-                        <button class="btn btn-danger"  role="close" type="button">Cancel</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Contact Form JS -->
-    <script>
-        ($)(function(){
-            var display_form = function(event){
-                event.preventDefault();
-                $("#contact_us_form").css("display","block");
-            }
-            var hide_form = function(){
-                $("#contact_us_form").css("display","none");
-            }
-            var set_message = function(message){
-                $("#contact_us_form div.alert-warning .message_out").text(message);
-                $("#contact_us_form div.alert-warning").css('display','block');
-            }
-            var check_input = function(){
-                set_message("Email is required.")
-            }
-            $("#home_cta_boxes .box").click(display_form);
-            $("div.mini-live-chat-form").click(display_form);
-            $("#contact_us_form [role='submit']").click(check_input);
-            $("#contact_us_form [role='close']").click(hide_form);
-            $("#contact_us_form input").popover({trigger:'focus'});
-        });
-    </script>
+
 </body>
 </html>
