@@ -16,7 +16,7 @@ div.fullscreen_overlay div.form_container {
 	min-height: 250px;
 	max-width: 500px;
 	display: inline-block;
-	background-color: #f5f5f5;
+	background-color: #fff;
 	margin-top: 50px;
 	border-radius: 8px;
 	-webkit-box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.75);
@@ -25,10 +25,15 @@ div.fullscreen_overlay div.form_container {
 }
 div.fullscreen_overlay div.form_container div.modal-header {
 	text-align: left;
+  color: #617741;
+  border-bottom: 1px solid #617741;
+}
+div.fullscreen_overlay div.form_container div.modal-header button {
+  color: #617741;
 }
 div.fullscreen_overlay div.form_container .modal-body {
 	padding: 20px;
-	background-color: #eee;
+	background-color: #E4E9D4;
 }
 div.fullscreen_overlay div.form_container .modal-body ul.fields {
 	width: 100%;
@@ -51,7 +56,7 @@ div.fullscreen_overlay div.form_container .modal-body ul.fields li .popover-cont
 div.fullscreen_overlay div.form_container .modal-body ul.fields li input {
 	width: 250px;
 	padding: 8px;
-	border: 1px solid #c0c0c0;
+	border: 1px solid #617741;
 	border-radius: 4px;
 }
 div.fullscreen_overlay div.form_container .modal-body ul.fields li input.error {
@@ -75,6 +80,9 @@ div.fullscreen_overlay div.form_container .modal-body .alert-warning button {
 	right: 15px;
 	top: 15px;
 	color: #a11;
+}
+div.fullscreen_overlay div.form_container .modal-footer {
+  border-top: 1px solid #617741;
 }
 div.fullscreen_overlay div.form_container .modal-footer p {
 	text-align: left;
