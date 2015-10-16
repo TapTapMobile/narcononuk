@@ -571,9 +571,6 @@ ul.second-level {
 #banner_fixed {
     max-height: 50px;
 }
-@media (max-width: 767px) {
-    #banner_fixed { display: none; }
-}
 .banner-bottom.fixedsticky .breadcrumb {
     visibility: hidden;
 }

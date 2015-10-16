@@ -1,0 +1,60 @@
+#jumbotron_banner {
+	height: 350px;
+	line-height: 350px;
+	text-align: center;
+	background-image: url('../images/nn-header-bg-infinite-trees3.jpg');
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#jumbotron_banner div {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+#jumbotron_banner .jumbotron-content {
+	max-width: 780px;
+	line-height: 1;
+	color: white;
+	text-shadow: 0 0 5px #000,0 0 2px #000;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+}
+#jumbotron_banner .jumbotron-content .hex-image {
+	width: 24%;
+	display: inline-block;
+}
+#jumbotron_banner .jumbotron-content .hex-image img {
+	width: 100%;
+}
+#jumbotron_banner .jumbotron-content .message {
+	width: 75%;
+	line-height: 1;
+	display: inline-block;
+}
+#jumbotron_banner .jumbotron-content .message .title {
+	font-size: 2.4em;
+}
+#jumbotron_banner .jumbotron-content .message .byline {
+	font-size: 0.9em;
+}
+#jumbotron_banner .jumbotron-content .message .sans {
+	font-size: 1.5em;
+}
+#jumbotron_banner .jumbotron-content .message .watch {
+	display: inline-block;
+	padding: 8px;
+	font-size: 0.9em;
+	background-color: rgba(0,20,0,0.5);
+	cursor: pointer;
+}
+
+@media (max-width: 650px) {
+	#jumbotron_banner .jumbotron-content .hex-image {
+		display: none;
+	}
+	#jumbotron_banner .jumbotron-content .message {
+		width: 100%;
+	}
+}

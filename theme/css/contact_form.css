@@ -35,13 +35,13 @@ div.fullscreen_overlay div.form_container div.modal-header h3 {
   display: inline-block;
   font-size: 20px;
   float: left;
-  margin: 15px auto auto auto;
+  margin: 18px auto auto auto;
   font-weight: 600;
 }
 div.fullscreen_overlay div.form_container div.modal-header img {
   float: right;
   vertical-align: middle;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 div.fullscreen_overlay div.form_container div.modal-header img[rel="cqc"] {
   margin-right: 5px;
