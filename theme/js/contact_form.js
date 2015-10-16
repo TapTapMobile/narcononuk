@@ -59,13 +59,6 @@
                 }
             }
 
-            // Check assoc.
-            // if(assoc.val().trim() == ""){
-            //     assoc.addClass("error");
-            // }else{
-            //     assoc.removeClass("error");
-            // }
-
             // Check phone.
             if(phone.val().trim() == ""){
                 phone.addClass("error");

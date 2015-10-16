@@ -29,6 +29,22 @@ div.fullscreen_overlay div.form_container div.modal-header {
 	text-align: left;
   color: #617741;
   border-bottom: 1px solid #617741;
+  overflow: auto;
+}
+div.fullscreen_overlay div.form_container div.modal-header h3 {
+  display: inline-block;
+  font-size: 20px;
+  float: left;
+  margin: 15px auto auto auto;
+  font-weight: 600;
+}
+div.fullscreen_overlay div.form_container div.modal-header img {
+  float: right;
+  vertical-align: middle;
+  margin-top: 15px;
+}
+div.fullscreen_overlay div.form_container div.modal-header img[rel="cqc"] {
+  margin-right: 5px;
 }
 div.fullscreen_overlay div.form_container div.modal-header button {
   color: #617741;
