@@ -7,7 +7,7 @@
         event.preventDefault();
         $("#contact_us_form input").removeClass("error");
         $("#contact_us_form form")[0].reset();
-        $("#contact_us_form").css("display","block");
+        $("#contact_us_form").css({"display" : "block"});
         $("body").css("overflow","hidden");
         unset_message();
     }

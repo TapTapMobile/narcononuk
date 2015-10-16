@@ -22,6 +22,8 @@ div.fullscreen_overlay div.form_container {
 	-webkit-box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.75);
 	-moz-box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.75);
 	box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.75);
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
 }
 div.fullscreen_overlay div.form_container div.modal-header {
 	text-align: left;
@@ -61,10 +63,10 @@ div.fullscreen_overlay div.form_container .modal-body ul.fields li input {
 }
 div.fullscreen_overlay div.form_container .modal-body ul.fields li input.error {
 	border-color: red !important;
-	animation-duration: 100ms;
-    animation-iteration-count: 4;
-    animation-name: shake-horizontal;
-    animation-timing-function: ease-in-out;
+  animation-duration: 700ms;
+  animation-iteration-count: 1;
+  animation-name: shake-horizontal;
+  animation-timing-function: ease;
 }
 div.fullscreen_overlay div.form_container .modal-body .alert-warning {
 	position: relative;
@@ -87,7 +89,6 @@ div.fullscreen_overlay div.form_container .modal-footer {
 div.fullscreen_overlay div.form_container .modal-footer p {
 	text-align: left;
 }
-
 @keyframes shake-horizontal {
   2% {
     transform: translate(1px, 0) rotate(0); }

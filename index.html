@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" href="/favicon.ico?_=trDBd4nX"/>
     <!-- this page is canonical -->
-    <link rel="stylesheet" type="text/css" href="theme/css/_combined_main.css"/>
+    <link rel="stylesheet" type="text/css" href="theme/css/combined_main.css"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400&subset=cyrillic,greek,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="alternate" type="application/rss+xml" title="RSS" href='http://www.narcononuk.org.uk/rss.xml'>
@@ -39,6 +39,7 @@
     <link rel="stylesheet" type="text/css" href="theme/css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="theme/css/contact_form.css"/>
     <link rel="stylesheet" type="text/css" href="theme/css/geolocation.css"/>
+    <link rel="stylesheet" type="text/css" href="theme/css/ani.css"/>
 
     <style>
         .narconon-infowindow {
@@ -2493,7 +2494,7 @@
         </div>
     </div>
 
-    <script src="theme/js/_combined.js"></script>
+    <script src="theme/js/combined.js"></script>
     <script src="theme/js/form.js"></script>
 
     <!-- Video Carousel START-->
@@ -2502,7 +2503,7 @@
             $('#home_anim_header .animated_slide_image img').each(function() {
                 $(this).attr('src', $(this).attr('data-src'));
             });
-            loadJS('theme/js/_combined_tweenlite.js', function() {
+            loadJS('theme/js/combined_tweenlite.js', function() {
                 var vid, playing;
                 window.setVideoHeader = function () {
                     $('#home_anim_header').addClass('video-enabled');
@@ -3001,8 +3002,8 @@
     </script>
 
     <!-- Contact Form -->
-    <div id="contact_us_form" class="fullscreen_overlay">
-        <div class="form_container">
+    <div id="contact_us_form" class="fullscreen_overlay fadeIn animated">
+        <div class="form_container bounceInDown animated">
             <form method="post" action="thankyou.html">
                 <div class="modal-header">
                     <button type="button" class="close" role="close" data-dismiss="modal" aria-hidden="true">&times;</button>
