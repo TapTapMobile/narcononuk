@@ -327,8 +327,8 @@
                     <p class="title">“Narconon saved our&nbsp;son's&nbsp;life”</p>
                     <p class="byline">Linda S. Mother of Narconon Graduate</p>
                     <p class="sans">For many, Narconon means freedom from the grip&nbsp;of&nbsp;addiction</p>
-                    <div class="watch michroma">
-                        WATCH THE VIDEO &nbsp;<span class="glyphicon glyphicon-play-circle"></span>
+                    <div class="watch michroma" onclick="play_header()">
+                        <span class="bordered">WATCH THE VIDEO &nbsp;<span class="glyphicon glyphicon-play-circle"></span></span>
                     </div>
                 </div>
             </div>
@@ -552,7 +552,7 @@
                 Hear their stories. Find out how Narconon helped them regain their lives.</h3>
                 <div class="success-disclaimer mb2">As with any drug rehabilitation programme, individual results will&nbsp;vary.</div>
 
-                <div class="videos-carousel">
+                <div id="video_carousel_thumbs" class="videos-carousel">
                     <div class="owl-arrow owl-arrow-prev"></div>
                     <div class="owl-arrow owl-arrow-next"></div>
                     <div class="owl-carousel">
@@ -1309,11 +1309,28 @@
 
     <script src="theme/js/combined.js"></script>
 
-    <!-- Video Carousel START
-     | Top videos.
-    -->
-
-    <!-- Video Carousel END-->
+    <!-- Header Video START -->
+    <script>
+        function play_header() {
+            location.hash = 'videobox';
+            $('#videobox .video-captioner .title').html('<span class="desc">Mother of Narconon Graduate</span> <br>Linda S.');
+            $('#videobox .video-captioner .category').attr('href', "#video_carousel_thumbs");
+            $('#videobox .video-captioner .category-title').html("What Graduates Say");
+            var vid_player = videojs('vid-carousel', {
+                    controls: true
+                }).on('ended', function () {
+                    try {
+                        this.exitFullscreen();
+                    } catch(e) {
+                        window.console && console.log(e);
+                    }
+                });
+            vid_player.poster("");
+            vid_player.src("http://progmedia.edgesuite.net/videos/narconon/en_gb/narconon-family-testimonial-linda-s_640_en_gb.mp4?v=nn-family-linda-s");
+            vid_player.play();
+        };
+    </script>
+    <!-- Header Video END-->
 
     <!-- Video Box START
      | Multiple video testimonials.
@@ -1365,7 +1382,7 @@
                 location.hash = 'videobox';
                 var data = $(this).data();
                 $('#videobox .video-captioner .title').html(data.title);
-                $('#videobox .video-captioner .category').attr('href', data.categoryHref);
+                $('#videobox .video-captioner .category').attr('href', "#video_carousel_thumbs");
                 $('#videobox .video-captioner .category-title').html(data.categoryTitle);
                 if (!vid) {
                     vid = videojs('vid-carousel', {
