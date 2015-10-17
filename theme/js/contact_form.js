@@ -4,16 +4,50 @@
     var names_format = /^[a-zA-Z \.]+$/;
 
     var display_form = function(event){
+
         event.preventDefault();
         $("#contact_us_form input").removeClass("error");
         $("#contact_us_form form")[0].reset();
-        $("#contact_us_form").css({"display" : "block"});
         $("body").css("overflow","hidden");
         unset_message();
+
+        function overlay_anim_end(){
+            $("#contact_us_form div.form_container")
+            .css("display","inline-block")
+            .addClass("animated bounceInDown");
+        }
+        function box_anim_end(){
+            $(this).css(box_css);
+        }
+
+        $("#contact_us_form div.form_container")
+            .removeClass("animated fadeOutUp")
+            .css("animation-delay","200ms")
+        $("#contact_us_form")
+            .removeClass("animated fadeOut")
+            .css("display","block")
+            .addClass("animated fadeIn")
+        $("#contact_us_form div.form_container")
+            .addClass("animated bounceInDown")
+            .one('animationend', function(){
+                $(this).css("animation-delay","0ms");
+                $("#contact_us_form").css("animation-delay","100ms");
+            });
     }
     var hide_form = function(){
-        $("#contact_us_form").css("display","none");
-        $("body").css("overflow","auto");
+
+        
+
+        $("#contact_us_form div.form_container")
+            .removeClass("animated bounceInDown")
+            .addClass("animated fadeOutUp")
+        $("#contact_us_form")
+            .removeClass("animated fadeIn")
+            .addClass("animated fadeOut")
+            .one('animationend', function(){
+            $(this).css("display","none");
+            $(this).css("animation-delay","0ms");
+        });
     }
     var set_message = function(message){
         $("#contact_us_form div.alert-warning .message_out").html(message);
@@ -104,10 +138,9 @@
             }
             $("#contact_us_form input").popover({trigger:'focus'});
         },100);
-
     }
-    $("#home_cta_boxes .box").click(display_form);
-    $("div.mini-live-chat-form").click(display_form);
+    $("#home_cta_boxes .box").unbind().click(display_form);
+    $("div.mini-live-chat-form").unbind().click(display_form);
     $("#contact_us_form [role='submit']").click(check_input);
     $("#contact_us_form [role='close']").click(hide_form);
     $("#contact_us_form input").popover({trigger:'focus'});
