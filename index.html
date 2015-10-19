@@ -310,7 +310,7 @@
                 </a>
                 <a class="banner-floater get-help-link double-bracket-after hidden-xs">Get Help Now</a>
                 <div class="breadcrumb">
-                    <span class="double-bracket"> <span class="icon-right-chevron-bold"></span> </span>
+                    <span class="double-bracket"> </span>
                 </div>
             </div>
         </div>
@@ -379,7 +379,7 @@
                             At Narconon, we are dedicated to one thing: helping you overcome addiction for good. Part of what makes this possible is the Narconon environment. Every detail has been taken into account to give you the stability and comfort to help you free yourself from addiction and rebuild your life without drugs.
                         </p>
                         <p class="mb3">        
-                            <a>About Us&nbsp;<span class="tweaked-angle"><span class="icon-right-chevron-bold"></span></span></a>
+                            About Us&nbsp;<span class="tweaked-angle"><span class="icon-right-chevron-bold"></span></span>
                         </p>
                     </div>
                 </div>
@@ -1314,7 +1314,10 @@
         function play_header() {
             location.hash = 'videobox';
             $('#videobox .video-captioner .title').html('<span class="desc">Mother of Narconon Graduate</span> <br>Linda S.');
-            $('#videobox .video-captioner .category').attr('href', "#video_carousel_thumbs");
+            $('#videobox .video-captioner .category').attr('href', "#video_carousel_thumbs")
+                .click(function(){
+                    vid_player.pause();
+                });
             $('#videobox .video-captioner .category-title').html("What Graduates Say");
             var vid_player = videojs('vid-carousel', {
                     controls: true

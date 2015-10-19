@@ -37,7 +37,6 @@
     var hide_form = function(){
 
         
-
         $("#contact_us_form div.form_container")
             .removeClass("animated bounceInDown")
             .addClass("animated fadeOutUp")
@@ -47,6 +46,7 @@
             .one('animationend', function(){
             $(this).css("display","none");
             $(this).css("animation-delay","0ms");
+            $("body").css("overflow","auto");
         });
     }
     var set_message = function(message){
