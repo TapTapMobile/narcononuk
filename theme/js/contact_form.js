@@ -139,6 +139,8 @@
             $("#contact_us_form input").popover({trigger:'focus'});
         },100);
     }
+    $(".get-help-link").unbind().click(display_form);
+    $(".mini-help-block-get-help").unbind().click(display_form);
     $("#home_cta_boxes .box").unbind().click(display_form);
     $("div.mini-live-chat-form").unbind().click(display_form);
     $("#contact_us_form [role='submit']").click(check_input);

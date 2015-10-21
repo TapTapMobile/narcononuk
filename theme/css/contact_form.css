@@ -63,6 +63,14 @@ div.fullscreen_overlay div.form_container .modal-body p {
 	padding: 0;
 	text-align: left;
 }
+div.fullscreen_overlay div.form_container .modal-body ul.policy {
+  margin: 0;
+  padding: 0;
+  max-width: 400px;
+}
+div.fullscreen_overlay div.form_container .modal-body ul.policy li {
+  display: inline-block !important;
+}
 div.fullscreen_overlay div.form_container .modal-body ul.fields li {
 	list-style-type: none;
 	display: block;
