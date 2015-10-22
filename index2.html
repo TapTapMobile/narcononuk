@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="theme/css/bodyobjects.css"/>
     <link rel="stylesheet" type="text/css" href="theme/css/videos-box.css"/>
     <link rel="stylesheet" type="text/css" href="theme/css/footer.css"/>
-    <link rel="stylesheet" type="text/css" href="theme/css/contact_form.css"/>
+    <link rel="stylesheet" type="text/css" href="theme/css/modal.css"/>
     <link rel="stylesheet" type="text/css" href="theme/css/geolocation.css"/>
 
     <style>
@@ -898,7 +898,7 @@
                         </script>
                         
                     </div>
-                    
+                    <!--
                     <script src="https://maps.googleapis.com/maps/api/js"></script>
                     <script>
                         $(document).ready(function() {
@@ -946,7 +946,7 @@
                             marker.setMap(map);
                         });
                     </script>
-                    
+                    -->
                     <div class="extender" style="margin-top: 20px; padding-bottom: 30px; padding-top: 35px;">
                         <h2 class="michroma text-center pb3">Map & Directions</h2>
                         <div class="table-row" style="width: 70%; margin: 0 auto;">
@@ -1051,17 +1051,24 @@
                     <div class="copyright-inner" itemscope itemtype="http://schema.org/Organization" itemid="http://www.narcononuk.org.uk/">
                         <meta itemprop="telephone" content="01435512460">
                         <div>
+                            <a class="iframe_link" rel="Copyright and Trademark Notice" href="tmnotice.html">
                                 © 2015  
                                 <span itemprop="name">Narconon United Kingdom</span>. 
                                 All Rights Reserved.
-                            <!--
-                            <a href="online-privacy-notice.html">Online Privacy Notice</a>
-                            <a href="terms-of-use.html">Terms of Use</a>
-                            <a href="notice-of-privacy-practices.html">Notice of Privacy Practices</a>
-                            <a href="disclaimer.html">Disclaimer: Individual results are not guaranteed and may&nbsp;vary.</a>
-                            -->
+                            </a>
+                            &nbsp;&bull;&nbsp;
+                            <a class="iframe_link" rel="Online Privacy Notice" href="online-privacy-notice.html">Online Privacy Notice</a>
+                            &nbsp;&bull;&nbsp;
+                            <a class="iframe_link" rel="Terms of Use" href="terms-of-use.html">Terms of Use</a>
+                            &nbsp;&bull;&nbsp;
+                            <a class="iframe_link" rel="Notice of Privacy Practices" href="notice-of-privacy-practices.html">Notice of Privacy Practices</a>
+                            &nbsp;&bull;&nbsp;
+                            <a class="iframe_link" rel="Disclaimer" href="disclaimer.html">Disclaimer: Individual results are not guaranteed and may&nbsp;vary.</a>
+                            <br />
+                            &nbsp;
                         </div>
-                        <div class="copyright-end-line">Narconon and the Narconon logo are trademarks and service marks owned by the Association for Better Living and Education International and are used with its permission.
+                        <div class="copyright-end-line">
+                            Narconon and the Narconon logo are trademarks and service marks owned by the Association for Better Living and Education International and are used with its permission.
                         </div>
                     </div>
                     <div>Narconon United Kingdom is a Charitable Incorporated Organisation registered in England and Wales (Registered number 1159334) and registered with the Care Quality Commission.</div>
@@ -1373,7 +1380,7 @@
 
     <!-- Contact Form -->
     <div id="contact_us_form" class="fullscreen_overlay">
-        <div class="form_container">
+        <div class="form_container modal_box_container">
             <form method="post" action="thankyou.html">
                 <div class="modal-header">
                     <button type="button" class="close" role="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -1400,20 +1407,6 @@
                     <p style="text-align:center">
                         <small><strong>Privacy Policy:</strong> We hate SPAM and promise to keep your details safe.</small><br />
                     </p>
-                    <ul class="policy">
-                        <li>
-                            <small><a href="online-privacy-notice.html">Online Privacy Notice</a></small>
-                        </li>
-                        <li>
-                            <small><a href="terms-of-use.html">Terms of Use</a></small>
-                        </li>
-                        <li>
-                            <small><a href="notice-of-privacy-practices.html">Notice of Privacy Practices</a></small>
-                        </li>
-                        <li>
-                            <small><a href="disclaimer.html">Disclaimer</a></small>
-                        </li>
-                    </ul>
                 </div>
                 <div class="modal-footer">
                     <div class="form_field">
@@ -1423,7 +1416,229 @@
             </form>
         </div>
     </div>
+    <!-- Document Modal -->
+    <div id="document_modal" class="fullscreen_overlay">
+        <div class="modal_box_container">
+            <div class="modal-header">
+                <button type="button" role="close" class="close" role="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Header</h3>
+            </div>
+            <div class="modal-body">
+                <div class="loader"></div>
+                <iframe class="content_documents" src="" onload="$('#document_modal div.loader').css('display','none')"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button role="close" class="btn btn-danger btn-sm">Close</button>
+            </div>
+        </div>
+    </div>
+    <!-- Document Modal -->
+    <script>
+        ($)(function(){
+            var open_modal = function(event){
+                event.preventDefault();
+                var title = $(this).attr('rel');
+                var link = $(this).attr('href');
+                $("body").css("overflow","hidden");
+                $("#document_modal div.loader").css("display","block");
+                $("#document_modal div.modal-header h3").text(title);
+                $("#document_modal div.modal_box_container")
+                    .removeClass("animated fadeOutUp")
+                    .css("animation-delay","200ms")
+                $("#document_modal")
+                    .removeClass("animated fadeOut")
+                    .css("display","block")
+                    .addClass("animated fadeIn")
+                $("#document_modal div.modal_box_container")
+                    .addClass("animated bounceInDown")
+                    .one('animationend', function(){
+                        $(this).css("animation-delay","0ms");
+                        $("#document_modal").css("animation-delay","100ms");
+                        $("#document_modal iframe.content_documents").attr("src",link);
+                    });
+
+            }
+            var close_modal = function(){
+                $("#document_modal iframe.content_documents").attr("src","");
+                $("#document_modal div.modal_box_container")
+                .removeClass("animated bounceInDown")
+                .addClass("animated fadeOutUp")
+                $("#document_modal")
+                    .removeClass("animated fadeIn")
+                    .addClass("animated fadeOut")
+                    .one('animationend', function(){
+                        $(this).css("display","none");
+                        $(this).css("animation-delay","0ms");
+                        $("body").css("overflow","auto");
+                    });
+            }
+            $("#copyright a.iframe_link").click(open_modal);
+            $("#document_modal [role='close']").click(close_modal);
+        });
+    </script>
     <!-- Contact Form JS -->
-    <script src="theme/js/contact_form.js"></script>
+    <script>
+        ($)(function(){
+            var phone_format = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+            var email_format = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            var names_format = /^[a-zA-Z \.]+$/;
+
+            var display_form = function(event){
+
+                event.preventDefault();
+                $("#contact_us_form input").removeClass("error");
+                $("#contact_us_form form")[0].reset();
+                $("body").css("overflow","hidden");
+                unset_message();
+
+                $("#contact_us_form div.form_container")
+                    .removeClass("animated fadeOutUp")
+                    .css("animation-delay","200ms")
+                $("#contact_us_form")
+                    .removeClass("animated fadeOut")
+                    .css("display","block")
+                    .addClass("animated fadeIn")
+                $("#contact_us_form div.form_container")
+                    .addClass("animated bounceInDown")
+                    .one('animationend', function(){
+                        $(this).css("animation-delay","0ms");
+                        $("#contact_us_form").css("animation-delay","100ms");
+                    });
+            }
+            var hide_form = function(){
+
+                $("#contact_us_form div.form_container")
+                    .removeClass("animated bounceInDown")
+                    .addClass("animated fadeOutUp")
+                $("#contact_us_form")
+                    .removeClass("animated fadeIn")
+                    .addClass("animated fadeOut")
+                    .one('animationend', function(){
+                    $(this).css("display","none");
+                    $(this).css("animation-delay","0ms");
+                    $("body").css("overflow","auto");
+                });
+            }
+            var set_message = function(message){
+                $("#contact_us_form div.alert-warning .message_out").html(message);
+                $("#contact_us_form div.alert-warning").css('display','block');
+            }
+            var unset_message = function(){
+                $("#contact_us_form div.alert-warning .message_out").html("");
+                $("#contact_us_form div.alert-warning").css('display','none');
+            }
+            var check_input = function(){
+                var field_parent = $("#contact_us_form div.modal-body");
+                var fields_list = $("#contact_us_form ul.fields");
+                var fields_copy = fields_list.clone(true);
+                var errors = [];
+
+                // Operations.
+                fields_list.remove();
+                field_parent.prepend(fields_copy);
+
+                setTimeout(function(){
+                    var name = $("#contact_us_form input[name='name']");
+                    var phone = $("#contact_us_form input[name='phone']");
+                    var email = $("#contact_us_form input[name='email']");
+
+                    // Check name.
+                    if(name.val().trim() == ""){
+                        errors.push("Name is required.");
+                        name.addClass("error");
+                    }else{
+                        if(!names_format.test(name.val())){
+                            name.addClass("error");
+                            errors.push("Name is incorrect.");
+                        }else{
+                            var name_temp = name.val().trim();
+                            console.log(name_temp.length);
+                            if(name_temp.length < 5){
+                                name.addClass("error");
+                                errors.push("Full name is required.");
+                            }else{
+                                name.removeClass("error");
+                            }
+                        }
+                    }
+
+                    // Check phone.
+                    if(phone.val().trim() == ""){
+                        phone.addClass("error");
+                        errors.push("Phone number is required.");
+                    }else{
+                        if(!phone_format.test(phone.val())){
+                            phone.addClass("error");
+                            errors.push("Phone number is invalid.");
+                        }else{
+                            phone.removeClass("error");
+                        }
+                    }
+
+                    // Check email.
+                    if(email.val().trim() == ""){
+                        email.addClass("error");
+                        errors.push("Email is required.");
+                    }else{
+                        if(!email_format.test(email.val())){
+                            email.addClass("error");
+                            errors.push("Email is invalid.");
+                        }else{
+                            email.removeClass("error");
+                        }
+                    }
+                },1);
+                setTimeout(function(){
+                    unset_message();
+                    if(errors.length > 0){
+                        if(errors.length > 1){
+                            var e_message = '<div>Please correct the following:</div>';
+                            e_message += '<ul>';
+                            for(var i=0; i<errors.length; i++){
+                                e_message += '<li>'+errors[i]+'</li>';
+                            }
+                            e_message += '</ul>';
+                            set_message(e_message);
+                        }else{
+                            set_message(errors[0]);
+                        }
+                    }else{
+                        var stamp = new Date();
+                        var name = $("#contact_us_form input[name='name']");
+                        var phone = $("#contact_us_form input[name='phone']");
+                        var email = $("#contact_us_form input[name='email']");
+                        var details = {
+                                'timestamp' : stamp,
+                                'name' : name.val(),
+                                'tel'  : phone.val(),
+                                'email': email.val()
+                            }
+                        $.ajax({
+                            type : "post",
+                            url : "https://zapier.com/hooks/catch/32f0bd/",
+                            data : details,
+                            success : function(response) {
+                                if(response.status == "success") {
+                                    top.location = "thankyou.html";
+                                }
+                                else {
+                                    alert("Unknown error encountered.");
+                                }
+                            }
+                        })
+                    }
+                    $("#contact_us_form input").popover({trigger:'focus'});
+                },100);
+            }
+            $(".get-help-link").unbind().click(display_form);
+            $(".mini-help-block-get-help").unbind().click(display_form);
+            $("#home_cta_boxes .box").unbind().click(display_form);
+            $("div.mini-live-chat-form").unbind().click(display_form);
+            $("#contact_us_form [role='submit']").click(check_input);
+            $("#contact_us_form [role='close']").click(hide_form);
+            $("#contact_us_form input").popover({trigger:'focus'});
+            $("#contact_us_form .alert-warning button ").click(unset_message);
+        });
+    </script>
 </body>
 </html>

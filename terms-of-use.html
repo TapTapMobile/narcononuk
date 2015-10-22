@@ -1,563 +1,166 @@
 <!DOCTYPE html>
-<!--[if lte IE 6]><html class="ie6 ie67 ie678 ie6789 ie678910" lang="en-gb"><![endif]-->
-<!--[if lte IE 7]><html class="ie7 ie67 ie678 ie6789 ie678910" lang="en-gb"><![endif]-->
-<!--[if lte IE 8]><html class="ie8 ie678 ie6789 ie678910" lang="en-gb"><![endif]-->
-<!--[if lte IE 9]><html class="ie9 ie6789 ie678910" lang="en-gb"><![endif]-->
-<!--[if lte IE 10]><html class="ie10 ie678910" lang="en-gb"><![endif]-->
-<!--[if gt IE 10]><!--><html lang="en-gb" itemscope itemtype="http://schema.org/WebPage" class="no-js"><!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<link rel="icon" href="/favicon.ico?_=trDBd4nX"/>
-    <!-- this page is canonical -->
-    <link rel="stylesheet" type="text/css" href="theme/css/combined_main.css?_=trDBd4nX"/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400&subset=cyrillic,greek,latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="alternate" type="application/rss+xml" title="RSS" href='http://www.narcononuk.org.uk/rss.xml'>
-
-    <title>Narconon UK Drug & Alcohol Rehabilitation</title>
-    <meta name="description" content="Narconon United Kingdom provides drug & alcohol rehab, drug education and prevention programs that help millions improve their lives. Call 01435 512 460 if you need help." />
-    <!-- Page Styles -->
-    <link rel="stylesheet" type="text/css" href="theme/css/topmenu.css"/>
-    <link rel="stylesheet" type="text/css" href="theme/css/bodyobjects.css"/>
-    <link rel="stylesheet" type="text/css" href="theme/css/footer.css"/>
-
-    <style>
-        .narconon-infowindow {
-            min-width: 200px;
-            font-family: "Myriad Set Pro", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-            cursor: pointer;
-        }
-
-        .narconon-infowindow strong {
-            font-size: 1.2em;
-        }
-        .narconon-infowindow box {
-            box-shadow: -3px 0px 6px -3px rgba(0, 0, 0, 0.4);
-            border-radius: 5px;
-        }
-        .narconon-infowindow a {
-            color: #666 !important;
-            margin-top: 0;
-        }
-        .narconon-infowindow address {
-            margin-bottom: 5px;
-        }
-        .bouncey-animation-target {
-          -webkit-animation: bouncy 1000ms linear both;
-          animation: bouncy 1000ms linear both;
-        }
-        @-webkit-keyframes bouncy { 
-          0% {  opacity: 0;
-                -webkit-transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-          }
-          6.61% { -webkit-transform: matrix3d(0.943, 0, 0, 0, 0, 0.943, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.943, 0, 0, 0, 0, 0.943, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          9.91% { -webkit-transform: matrix3d(1.082, 0, 0, 0, 0, 1.082, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.082, 0, 0, 0, 0, 1.082, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          13.21% { -webkit-transform: matrix3d(1.122, 0, 0, 0, 0, 1.122, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.122, 0, 0, 0, 0, 1.122, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          17.12% { opacity: 1;
-                   -webkit-transform: matrix3d(1.086, 0, 0, 0, 0, 1.086, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.086, 0, 0, 0, 0, 1.086, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-          }
-          20.92% { -webkit-transform: matrix3d(1.027, 0, 0, 0, 0, 1.027, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.027, 0, 0, 0, 0, 1.027, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          24.82% { -webkit-transform: matrix3d(0.985, 0, 0, 0, 0, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, 0, 0, 0, 0, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          28.63% { -webkit-transform: matrix3d(0.973, 0, 0, 0, 0, 0.973, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.973, 0, 0, 0, 0, 0.973, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          43.94% { -webkit-transform: matrix3d(1.006, 0, 0, 0, 0, 1.006, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.006, 0, 0, 0, 0, 1.006, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          59.36% { -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          74.77% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          90.19% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          100% { opacity: 1;
-                 -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-          } 
-        }
-        @keyframes bouncy { 
-          0% { opacity: 0;
-               -webkit-transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-          }
-          6.61% { -webkit-transform: matrix3d(0.943, 0, 0, 0, 0, 0.943, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.943, 0, 0, 0, 0, 0.943, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          9.91% { -webkit-transform: matrix3d(1.082, 0, 0, 0, 0, 1.082, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.082, 0, 0, 0, 0, 1.082, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          13.21% { -webkit-transform: matrix3d(1.122, 0, 0, 0, 0, 1.122, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.122, 0, 0, 0, 0, 1.122, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          17.12% { opacity: 1;
-                   -webkit-transform: matrix3d(1.086, 0, 0, 0, 0, 1.086, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.086, 0, 0, 0, 0, 1.086, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-          }
-          20.92% { -webkit-transform: matrix3d(1.027, 0, 0, 0, 0, 1.027, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.027, 0, 0, 0, 0, 1.027, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          24.82% { -webkit-transform: matrix3d(0.985, 0, 0, 0, 0, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.985, 0, 0, 0, 0, 0.985, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          28.63% { -webkit-transform: matrix3d(0.973, 0, 0, 0, 0, 0.973, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.973, 0, 0, 0, 0, 0.973, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          43.94% { -webkit-transform: matrix3d(1.006, 0, 0, 0, 0, 1.006, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.006, 0, 0, 0, 0, 1.006, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          59.36% { -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          74.77% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          90.19% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-          100% { opacity: 1;
-                 -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-          } 
-        }
-        body.org-narconon-ojai .get-directions {
-          display: none;
-        }
-    </style>
-
-</head>
-<body class=" front narconon-center-site  phone-number-detection-ip context-livesite org-narconon-united-kingdom front locale-en locale-en_GB">
-
-    <!--[if lte IE 7]>
-    <style>
-    #old_browser { width: 100%; font-size: 13px; background: #f1eca4; height: 35px; font-family: Arial, Verdana, sans-serif; margin: 0; box-sizing: content-box; }
-    #old_browser .warn { color: #e85c17; font-size: 25px; padding: 0 15px; width: 60px}
-    #old_browser .msg { padding-right: 10px; }
-    #old_browser .link { text-align: right; padding-right: 10px; }
-    #old_browser .link a { color: #e85c17; }
-    #old_browser .msg-ie { display: none; }
-    </style>
-
-    <table id="old_browser" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td class="warn"><img width="27" height="22" src="/theme/images/ie-warning-symbol.gif"/></td>
-            <td class="msg">Your browser <span class="msg-ie msg-ie6">(Internet Explorer 6)</span> <span class="msg-ie msg-ie7">(Internet Explorer 7)</span> is out of date. It has known security flaws and may not display all features of this and other websites.
-            </td>
-            <td class="link"><a target="_blank" href="http://browser-update.org/update-browser.html">Learn how to update your&nbsp;browser&nbsp;»</a></td>
-        </tr>
-    </table>
-    <![endif]-->
-
-    <!--[if IE 6]>
-    <style>
-    #old_browser .msg-ie.msg-ie6 { display: inline; }
-    </style>
-    <![endif]-->
-    <!--[if IE 7]>
-    <style>
-    #old_browser .msg-ie.msg-ie7 { display: inline; }
-    </style>
-    <![endif]-->
-    
-
-    <div id="main_parallax_parent" class="parallax main-scrolling-elem">
-        <div class="parallax__layer parallax__layer--base clone-content">
-        <div class="banner-overall-wrapper">
-            <div class="banner-holder banner-holder-first">
-                <div class="banner-inner gcui-responsive-width">
-                    <div class="banner-org-title">United Kingdom</div>
-                    <meta itemprop="logo" src="/theme/images/nn-logo-small.png">
-                    <svg class="logo-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="197.16px" height="51.613px" viewBox="0 0 197.16 51.613" enable-background="new 0 0 197.16 51.613" xml:space="preserve">
-                        <g id="nn_logo_green">
-                            <g>
-                                <g>
-                                    <path id="SVGID_17_" fill="#000000" d="M120.387,0.747c0.07,0.164,0.135,0.325,0.213,0.484c2.45,5.17,4.902,10.336,7.357,15.506
-                                        c0.133,0.271,0.227,0.48-0.023,0.789c-4.312,5.312-8.603,10.636-12.912,15.95c-0.112,0.143-0.362,0.252-0.549,0.254
-                                        c-2.852,0.018-5.699-0.002-8.553,0.033c-1.246,0.02-2.482,0.203-3.585,0.876c-1.433,0.868-1.981,2.268-2.067,3.834
-                                        c-0.099,1.854-0.07,3.717-0.088,5.575c-0.011,0.729-0.004,1.458-0.004,2.247h-0.462c-4.413,0-8.824,0-13.235-0.002
-                                        c-0.242,0-0.478-0.018-0.718-0.035c-1.082-0.095-1.776-0.602-1.844-1.675c-0.111-1.562-0.111-3.144-0.009-4.709
-                                        c0.073-1.073,0.789-1.659,1.868-1.823c0.369-0.056,0.747-0.078,1.121-0.078c2.813-0.028,5.639-0.06,8.458-0.072
-                                        c0.261-0.004,0.396-0.083,0.5-0.324c0.314-0.733,0.655-1.448,0.981-2.17c0.249-0.54,0.493-1.078,0.754-1.646
-                                        c-0.159-0.013-0.247-0.02-0.335-0.02c-4.007-0.002-8.014-0.011-12.017,0.007c-0.688,0.002-1.38,0.072-2.059,0.188
-                                        c-2.36,0.394-3.759,1.679-3.973,4.035c-0.208,2.291-0.138,4.611-0.164,6.917c-0.007,0.507,0.067,1.017,0.145,1.521
-                                        c0.33,2.067,1.494,3.399,3.564,3.839c0.759,0.163,1.544,0.266,2.317,0.269c5.278,0.023,10.564,0.017,15.844,0
-                                        c0.205,0,0.468-0.123,0.595-0.278c4.132-5.087,8.257-10.186,12.372-15.284c1.018-1.259,1.006-1.28,2.602-1.021
-                                        c1.224,0.198,2.346,0.614,3.183,1.672c-3.961,4.969-7.896,9.905-11.896,14.926h0.611c1.952,0,3.902,0.016,5.852-0.004
-                                        c0.72-0.009,1.441-0.049,2.154-0.14c2.588-0.322,4.135-1.858,4.286-4.449c0.127-2.171,0.095-4.35,0.093-6.522
-                                        c0-1.35-0.227-2.658-1.031-3.802c0.039-0.063,0.066-0.114,0.105-0.164c3.67-4.608,7.344-9.223,11.021-13.823
-                                        c0.111-0.138,0.342-0.247,0.519-0.252c1.156-0.021,2.312-0.012,3.468-0.012c0.106,0.002,0.219,0.032,0.385,0.057
-                                        c-1.918,2.623-3.789,5.193-5.627,7.713c1.774,0,3.529,0.013,5.283-0.016c0.182,0,0.413-0.164,0.535-0.321
-                                        c2.848-3.658,5.68-7.323,8.518-10.991c0.074-0.1,0.141-0.211,0.229-0.349c-2.81-0.208-5.558-0.413-8.312-0.618l-0.008-0.099
-                                        c5.024-3.632,10.057-7.26,15.104-10.905c-1.025-1.158-2.021-2.273-3.04-3.42c-5.188,3.759-10.368,7.51-15.562,11.272
-                                        c-0.074-0.145-0.121-0.235-0.17-0.329c-1.973-4.055-3.942-8.107-5.91-12.167c-0.135-0.271-0.275-0.397-0.604-0.394
-                                        C124.861,0.805,120.973,0.747,120.387,0.747"/>
-                                </g>
-                            </g>
-                            <g>
-                                <g>
-                                    <path id="SVGID_19_" fill="#000000" d="M157.473,46.249c-1.177-0.051-1.841-0.639-1.914-1.8c-0.096-1.4-0.113-2.815-0.031-4.217
-                                        c0.089-1.419,0.744-2.131,2.146-2.19c2.213-0.103,4.436-0.1,6.649,0c1.378,0.06,2.047,0.735,2.137,2.099
-                                        c0.101,1.472,0.062,2.964-0.053,4.438c-0.081,1.082-0.737,1.622-1.828,1.67c-1.201,0.051-2.401,0.011-3.603,0.011v0.009
-                                        c-0.69,0-1.387,0.014-2.078,0.014C158.421,46.277,157.943,46.271,157.473,46.249 M156.729,33.749
-                                        c-0.609,0.005-1.229,0.081-1.832,0.175c-2,0.319-3.412,1.342-3.914,3.384c-0.123,0.479-0.219,0.975-0.228,1.465
-                                        c-0.032,1.919-0.044,3.838-0.04,5.758c0.008,0.612,0.044,1.229,0.137,1.834c0.295,1.921,1.293,3.271,3.229,3.793
-                                        c0.603,0.166,1.229,0.301,1.851,0.312c1.684,0.041,5.045,0.122,5.045,0.122c1.959-0.063,3.93-0.048,5.885-0.215
-                                        c2.314-0.202,3.699-1.444,4.203-3.561c0.1-0.419,0.19-0.858,0.19-1.287c-0.005-2.439,0.054-4.893-0.086-7.325
-                                        c-0.131-2.332-1.464-3.725-3.747-4.206c-0.613-0.133-1.246-0.228-1.871-0.231c-1.769-0.018-3.535-0.021-5.31-0.021
-                                        C159.068,33.742,157.898,33.743,156.729,33.749"/>
-                                </g>
-                            </g>
-                            <g>
-                                <g>
-                                    <path id="SVGID_21_" fill="#000000" d="M7.794,33.908c-2.085,0.016-4.17,0.01-6.255,0.01c-0.145,0-0.292,0.017-0.459,0.021
-                                        v16.368h4.638V38.483c0.164,0.217,0.255,0.33,0.343,0.453c2.663,3.682,5.327,7.358,7.979,11.048
-                                        c0.19,0.258,0.376,0.374,0.702,0.372c2.071-0.016,4.141-0.01,6.212-0.014c0.157,0,0.321-0.011,0.483-0.018V33.939h-4.602v11.736
-                                        l-0.112,0.026c-0.123-0.171-0.249-0.339-0.371-0.509c-2.637-3.645-5.274-7.288-7.906-10.938
-                                        c-0.173-0.239-0.341-0.351-0.645-0.351C7.8,33.908,7.796,33.908,7.794,33.908"/>
-                                </g>
-                            </g>
-                            <g>
-                                <g>
-                                    <path id="SVGID_23_" fill="#000000" d="M175.957,33.918v16.392h4.605V38.471c0.135,0.171,0.213,0.263,0.277,0.356
-                                        c2.694,3.716,5.385,7.435,8.067,11.151c0.18,0.262,0.366,0.378,0.69,0.373c1.485-0.011,2.979-0.008,4.465-0.008
-                                        c0.603,0,1.193,0,1.791-0.003c0.146,0,0.285-0.011,0.432-0.017V33.943h-4.602v11.895c-0.227-0.305-0.367-0.497-0.502-0.687
-                                        c-2.637-3.646-5.271-7.291-7.918-10.933c-0.092-0.129-0.262-0.284-0.396-0.286c-1.486-0.015-2.97-0.017-4.462-0.017
-                                        C177.596,33.918,176.779,33.918,175.957,33.918"/>
-                                </g>
-                            </g>
-                            <g>
-                                <g>
-                                    <path id="SVGID_25_" fill="#000000" d="M127.8,33.918c-0.547,0-1.098,0-1.646,0c-0.146,0-0.289,0.017-0.428,0.021v16.362h4.59
-                                        V38.479c0.177,0.223,0.285,0.354,0.389,0.494c2.662,3.681,5.327,7.356,7.979,11.048c0.178,0.247,0.371,0.334,0.668,0.33
-                                        c2.084-0.011,4.172-0.005,6.256-0.005h0.436V33.954h-4.586v11.757c-0.198-0.12-0.32-0.28-0.438-0.444
-                                        c-2.649-3.672-5.309-7.334-7.955-11.01c-0.174-0.243-0.349-0.349-0.653-0.349C130.871,33.92,129.336,33.92,127.8,33.918"/>
-                                </g>
-                            </g>
-                            <g>
-                                <g>
-                                    <path id="SVGID_27_" fill="#000000" d="M35.749,34.312c-1.675,2.701-3.367,5.39-5.04,8.09c-0.183,0.293-0.384,0.396-0.724,0.396
-                                        c-1.349-0.021-2.698-0.011-4.05-0.011h-0.472v4.14h2.399c-0.719,1.159-1.401,2.256-2.099,3.376
-                                        c0.124,0.026,0.167,0.045,0.208,0.045c1.77,0,3.541,0.009,5.312-0.013c0.159,0,0.371-0.168,0.464-0.312
-                                        c0.583-0.933,1.146-1.867,1.695-2.812c0.141-0.247,0.297-0.32,0.571-0.318c2.022,0.01,4.049,0.005,6.075,0.005h0.483V42.77H36.12
-                                        c0.915-1.521,1.784-2.971,2.681-4.453c0.131,0.195,0.226,0.328,0.318,0.47c2.458,3.743,4.925,7.485,7.38,11.238
-                                        c0.161,0.243,0.326,0.335,0.616,0.328c1.5-0.016,2.999-0.005,4.5-0.005h0.895c-0.107-0.188-0.16-0.292-0.224-0.395
-                                        c-3.328-5.255-6.656-10.506-9.976-15.77c-0.145-0.23-0.309-0.271-0.546-0.27c-1.771,0.001-3.542,0.013-5.314-0.011
-                                        c-0.007,0-0.012,0-0.02,0C36.093,33.906,35.921,34.035,35.749,34.312"/>
-                                </g>
-                            </g>
-                            <g>
-                                <g>
-                                    <path id="SVGID_29_" fill="#000000" d="M55.208,33.918h-0.492v16.396h4.574v-12.3h0.587c2.338,0,4.677,0,7.016,0.003
-                                        c0.433,0,0.87,0.013,1.303,0.041c0.951,0.062,1.375,0.488,1.437,1.44c0.016,0.256,0.014,0.514,0.009,0.768
-                                        c-0.023,1.463-0.81,2.241-2.271,2.247c-1.318,0.005-2.641,0.002-3.958,0.002h-0.514c0.08,0.125,0.097,0.164,0.124,0.199
-                                        c2.189,2.47,4.371,4.938,6.57,7.396c0.118,0.135,0.355,0.223,0.535,0.227c1.8,0.018,3.601,0.011,5.401,0.009
-                                        c0.109,0,0.223-0.021,0.403-0.041c-1.672-1.797-3.287-3.535-4.942-5.318c0.296-0.103,0.526-0.201,0.771-0.25
-                                        c1.326-0.295,2.007-1.174,2.215-2.465c0.27-1.686,0.27-3.384,0.018-5.062c-0.282-1.877-1.225-2.833-2.955-3.162
-                                        c-0.468-0.088-0.953-0.123-1.43-0.125c-2.401-0.004-4.801-0.004-7.202-0.004C60.007,33.918,57.608,33.918,55.208,33.918"/>
-                                </g>
-                            </g>
-                            <g>
-                                <g>
-                                    <path id="SVGID_31_" fill="#000000" d="M131.986,2.635c-1.577,1.467-1.651,3.816-0.166,5.347c0.861,0.884,1.923,1.297,3.156,1.32
-                                        c0.354-0.048,0.721-0.062,1.062-0.155c1.515-0.404,2.597-1.308,2.991-2.861c0.369-1.43-0.059-2.672-1.133-3.669
-                                        c-0.799-0.741-1.865-1.11-2.935-1.11C133.883,1.504,132.799,1.883,131.986,2.635"/>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <div class="spacer"></div> 
-        <div class="home-wrapper">
-            <!-- >Welcome to  Narconon United Kingdom START -->
-
-<div id="main">
-
-<h1>Terms of Use</h1>
-
-<h3>Agreement to Terms of Use</h3>
-
-<p>The following Terms of Use govern your use of the website for Narconon United&nbsp;Kingdom. Please read these Terms of Use carefully. Your use of this website constitutes your agreement to be bound by all terms. If you disagree with one or more of these terms or find them unacceptable in any way, please do not enter or use our website. 
-
-</p><p>This Agreement is divided into two parts. Part One explains all of the terms that govern your use of this website. Part Two contains additional legal terms, including provisions that limit our liability to you and require individual arbitration for any potential legal dispute. To use our website, you must accept all of the terms of these Terms of Use.
-
-</p><h3>Changes to Terms of Use</h3>
-
-<p>We have the right to change or add to the terms of these Terms of Use at any time by posting the amended Terms of Use on this website. Any use of this website after our publication of any such changes shall constitute your acceptance of the Terms of Use as modified. However, any Dispute that arose before the modification shall be governed by the Terms of Use (including the binding individual arbitration clause) that was in place when the Dispute arose.
-
-
-
-</p><h2>Part One: Terms Governing Use of the Website</h2>
-
-<h3>Emergencies</h3>
-
-<p>THIS WEBSITE IS NOT AN EMERGENCY-RESPONSE OR EMERGENCY-MONITORING SERVICE AND ANY PERSON WHO IS AWARE OF AN EMERGENCY SITUATION OR BELIEVES THAT A PERSON MAY BE AT RISK OF INJURY OR DEATH OR WHO MAY HARM THEMSELVES OR ANOTHER PERSON SHOULD DIAL “999” OR AN APPROPRIATE EMERGENCY RESPONDER. NARCONON UNITED&nbsp;KINGDOM IS UNDER NO OBLIGATION TO MONITOR OR RESPOND TO COMMUNICATIONS MADE TO THIS WEBSITE.
-
-</p><h3>Age Limitations</h3>
+<html lang="en-gb">
+    <head>
+      <style>
+         body{
+            margin: 0;
+            margin-left: 15px;
+            margin-right: 15px;
+            background: transparent !important;
+         }
+      </style>
+    </head>
+    <body>
 
-<p>This website is intended and only suitable for individuals 18 years of age and above. Some of the content on this website may not be appropriate for children. Children under the age of 13 are not permitted to use this website. We strongly recommend that children between the ages of 13 and 17 ask their parent’s or guardian’s permission before viewing our website. Narconon United&nbsp;Kingdom hereby disclaims all liability for use by individuals under the age of 18.  
+      <div id="main">
 
-</p><h3>Information on this Website is Not Professional Advice</h3>
+      <h1>Terms of Use</h1>
 
-<p>All data, information, text, graphics, links, and other material on this website are provided as a convenience to our website visitors. The information provided on this website is for general informational and educational purposes only. The information provided on our website is not intended to serve as medical or other professional advice and is not to be used for diagnosis or treatment of any condition or symptom. Information provided on this website does not constitute the provision or practise of medical or professional health care advice or services.
+      <h3>Agreement to Terms of Use</h3>
 
-</p><p>You should consult your physician or other qualified health care provider regarding any specific questions you may have. You should never disregard professional advice or delay in seeking treatment based on the information contained on this website or other websites linked to or from it.
+      <p>The following Terms of Use govern your use of the website for Narconon United&nbsp;Kingdom. Please read these Terms of Use carefully. Your use of this website constitutes your agreement to be bound by all terms. If you disagree with one or more of these terms or find them unacceptable in any way, please do not enter or use our website. 
 
-</p><h3>Restricted Use</h3>
+      </p><p>This Agreement is divided into two parts. Part One explains all of the terms that govern your use of this website. Part Two contains additional legal terms, including provisions that limit our liability to you and require individual arbitration for any potential legal dispute. To use our website, you must accept all of the terms of these Terms of Use.
 
-<p>You may use this website only to the extent that you obey all laws, rules, and regulations applicable to your use of this website.
+      </p><h3>Changes to Terms of Use</h3>
 
-</p><h3>Your Privacy</h3>
+      <p>We have the right to change or add to the terms of these Terms of Use at any time by posting the amended Terms of Use on this website. Any use of this website after our publication of any such changes shall constitute your acceptance of the Terms of Use as modified. However, any Dispute that arose before the modification shall be governed by the Terms of Use (including the binding individual arbitration clause) that was in place when the Dispute arose.
 
-<p>Upon acceptance of these Terms of Use you confirm that you have read, understood, and accepted our <a href="online-privacy-notice.html">Online Privacy Notice</a>.
 
-</p><h3>Social Media and Online Communities</h3>
 
-<p>Narconon United&nbsp;Kingdom may provide you opportunities to share information on third party social media sites or platforms such as Facebook, Instagram, LinkedIn, Twitter, Google+, or other similar sites (collectively, “Social Media Sites”). Narconon United&nbsp;Kingdom may also provide you opportunities to participate in online communities on such Social Media Sites and may host discussion boards, chats, and other forums on this website. For example, you may use your Instagram handle and tag your photos and postings (“Tagged Content”) with the hashtag #narconon (or other hashtags as we may provide from time to time) in order to submit your Tagged Content for potential use on our website. If you post Tagged Content with the hashtag #narconon (or other hashtags as we may provide), your activity and participation is governed by these Terms of Use. Additionally, you remain responsible for your compliance with other applicable terms and conditions such as those of Instagram or other Social Media Sites. Without limitation of any other obligations, you agree that you will be respectful of others and their privacy and will not submit photos of others without their express permission.  
+      </p><h2>Part One: Terms Governing Use of the Website</h2>
 
-</p><p>If you participate in any Narconon United&nbsp;Kingdom online community, discussion board or other forum, you agree that anything you submit is being provided by you voluntarily, on a non-confidential basis, and without any compensation due to you and you grant Narconon United&nbsp;Kingdom a perpetual, worldwide, royalty-free, transferable, and sub-licensable, right and licence to use, copy, distribute, modify, create joint and derivative works, your content, postings and Tagged Content in any form or format. You further agree that (a) you will not post, transmit, or link to any material, websites, Tagged Content or other information or content that is libellous, defamatory, false, obscene, indecent, lewd, violent, abusive, threatening, harassing, discriminatory, or an expression of political or hate speech; (b) you may only post, upload or transmit photos or materials for which you have the copyright or other permission to distribute electronically citing the original source; (c) you may not violate, plagiarise, or infringe on the rights of third parties, including copyright, trademark, trade secret, privacy, personal, publicity, moral or proprietary rights; (d) you agree that any Tagged Content or materials you post or upload will be owned by you or be in the public domain; (e) you may not intentionally post, create, upload or transmit any software or other material that contains a virus or other harmful code or device; (f) you may not solicit other users, or distribute advertising, for products or services through the website, distribute chain letters or messages, mass mailings or bulk email or other bulk messages, or gather email addresses for the purpose of sending bulk email or other messages to other users of the website; (g) if you choose to submit Tagged Content or post items in public or “chat” portions of the website, such material, information, photographs, and other information you post in these public or group areas is available to the other individuals using website and Narconon United&nbsp;Kingdom does not warrant, guarantee or otherwise take steps to prevent other users from copying, displaying, uploading, transmitting or otherwise using your material, information, photographs or other information for any purpose whatsoever; (h) you will always use caution in posting personally identifying information, and never exchange personal financial information, address, phone numbers or other personal information; (i) you will not post any material that violates any law or regulation; (j) you will not impersonate any other person or use the identity of some other living person; and (k) your postings will truthfully reflect your own experience.  
+      <h3>Emergencies</h3>
 
-</p><p>Narconon United&nbsp;Kingdom may terminate or restrict your access to any Narconon United&nbsp;Kingdom online community, including access through the website. 
+      <p>THIS WEBSITE IS NOT AN EMERGENCY-RESPONSE OR EMERGENCY-MONITORING SERVICE AND ANY PERSON WHO IS AWARE OF AN EMERGENCY SITUATION OR BELIEVES THAT A PERSON MAY BE AT RISK OF INJURY OR DEATH OR WHO MAY HARM THEMSELVES OR ANOTHER PERSON SHOULD DIAL “999” OR AN APPROPRIATE EMERGENCY RESPONDER. NARCONON UNITED&nbsp;KINGDOM IS UNDER NO OBLIGATION TO MONITOR OR RESPOND TO COMMUNICATIONS MADE TO THIS WEBSITE.
 
-</p><h3>Selection and Removal of Tagged Content</h3>
+      </p><h3>Age Limitations</h3>
 
-<p>Narconon United&nbsp;Kingdom will review Tagged Content and select certain Tagged Content for posting on our website; we make no guarantee that your Tagged Content will be posted.  Notwithstanding the foregoing, you remain fully responsible and liable for your Tagged Content and its compliance with these Terms of Use, other applicable terms of use and applicable laws.  If your Tagged Content is posted to our website, you may request removal of your Tagged Content by marking it as “private” in your Social Media Site account or by email us at info@narcononuk.org.
+      <p>This website is intended and only suitable for individuals 18 years of age and above. Some of the content on this website may not be appropriate for children. Children under the age of 13 are not permitted to use this website. We strongly recommend that children between the ages of 13 and 17 ask their parent’s or guardian’s permission before viewing our website. Narconon United&nbsp;Kingdom hereby disclaims all liability for use by individuals under the age of 18.  
 
-</p><h3>Monitoring</h3>
-
-<p>We have no obligation to monitor any related websites, chats, discussion boards or any other materials that you or third parties transmit or post on or to the website or related websites, if any. However, you acknowledge and agree that we have the right (but not the obligation) to monitor the website, discussion boards, the chats, and the materials you transmit or post; to alter or remove any such materials (including, without limitation, any posting to a chat or discussion board); and to disclose such materials and the circumstances surrounding their transmission to any third party in order to operate the website properly, to protect ourselves, our sponsors, and our other clients and visitors, and to comply with legal obligations or governmental requests.
-
-
-</p><h3>Copyright Notice</h3>
-
-<p>This website is owned and operated by Narconon United&nbsp;Kingdom.  The entire contents and design of the site are protected by U.S. and international copyright law. All rights regarding the website and materials contained on the website are either owned by Narconon United&nbsp;Kingdom, are licensed to it, or are used with permission.  Narconon United&nbsp;Kingdom and its licensors retain and reserve all proprietary rights to the contents of this website. 
-
-</p><p>You may not copy, republish, upload, post, display, transmit, or frame any of these materials without prior written consent from Narconon United&nbsp;Kingdom.  You may link to, view, download, use, display and print a single copy of the materials found on this website only for personal, noncommercial, and informational purposes as long as: (1) you do not alter or modify the materials in any way; (2) you include all applicable copyright, trademark and other notices and disclaimers; and (3) you do not use the materials in a way that suggests an association with Narconon United&nbsp;Kingdom or an affiliated entity.  All such copies must include, at a minimum, the following copyright notice:  “Copyright © 2015 Narconon United&nbsp;Kingdom.  All rights reserved.”  Any other use of the website or the information contained here is strictly prohibited. Narconon United&nbsp;Kingdom may terminate the above licence at any time for any reason. If you breach any of these terms your licence terminates immediately and automatically and without notice. Upon the termination of this licence you must stop using this site, including all content, and return or destroy all copies, including electronic copies, of the content in your possession or control. 
-
-<!-- <h3>Copyright Infringement – DMCA Notice</h3>
-
-<p>The Digital Millennium Copyright Act (the “DMCA”) provides remedies for copyright holders who believe in good faith that material appearing on the Internet infringes their rights under copyright law. If you believe in good faith that content or material on this website infringes a valid copyright owned by you, you (or your agent) may send Narconon United Kingdom a notice requesting that the material be removed, or access to it blocked. This request should be sent to: copyright@narconon.org; or to: Narconon United Kingdom 7065 Hollywood Blvd, Los Angeles, CA 90028, United States. 
-
-<p>The notice must include the following information: (a) a physical or electronic signature of a person authorised to act on behalf of the owner of an exclusive right that is allegedly infringed; (b) identification of the copyrighted work claimed to have been infringed; (c) identification of the material that is claimed to be infringing or the subject of infringing activity; (d) the name, address, telephone number, and email address of the complaining party; (e) a statement that the complaining party has a good faith belief that use of the material in the manner complained of is not authorised by the copyright owner, its agent or the law; and (f) a statement that the information in the notification is accurate and, under penalty of perjury, that the complaining party is authorised to act on behalf of the owner of an exclusive right that is allegedly infringed. If you believe in good faith that a notice of copyright infringement has been wrongly filed against you, the DMCA permits you to send us a counter-notice. Notices and counter-notices must meet the then-current statutory requirements imposed by the DMCA. Notices and counter-notices with respect to the website should be sent to the address above.   -->
-
-</p><h3>Trademark Notice</h3>
-
-<p>Narconon United&nbsp;Kingdom names and logos and all related product and service names, design marks, and slogans are the trademarks or service marks of Narconon United&nbsp;Kingdom. All rights are reserved.  You are not authorised to use any Narconon United&nbsp;Kingdom name or mark in any advertisement, publicity or in any other commercial manner without prior written consent of Narconon United&nbsp;Kingdom.  All other trademarks appearing on the website are the property of their respective owners.   
-
-</p><h3>Online Store</h3>
-
-<p>Narconon United&nbsp;Kingdom is not responsible for the content of any products other than those specifically published by Narconon United&nbsp;Kingdom and does not guarantee that any product is currently available, merchantable, or suitable to a particular purpose. 
-
-</p><h3>Making Purchases</h3>
-
-<p>Certain books, products, services, or other items may be advertised or offered for sale on or in conjunction with the website. If you wish to purchase an item, you may be asked by Narconon United&nbsp;Kingdom or an applicable third party to supply certain information, including, but not limited to, credit card or other payment information. You agree to provide Narconon United&nbsp;Kingdom or such third party with information that is truthful, accurate, complete, and current, and to comply with the terms and conditions of any agreement that you enter in connexion with your purchase of any product or service. Narconon United&nbsp;Kingdom is not responsible for any errors in shipping information provided by you or for a non-secure ship-to location. You are responsible for all activity by and charges incurred by users of your account, credit card or other payment mechanism, as well as for paying any applicable taxes. Any pricing of items is subject to change without notice, and any order is not deemed accepted by us until we ship or deliver the product(s) to you. We may correct at any time, including after shipment, pricing or similar errors, including but not limited to typos or outdated pricing.   
-
-</p><p>We reserve the right, without prior notification, to change the descriptions, images or listings of, or links or references to, products and/or services on the website (collectively, “Product Offerings”), or to limit the order quantity on any product or service and/or refuse service to you.
-
-</p><h3>Security</h3>
-
-<p>We have implemented administrative, technical, and physical safeguards designed to secure your personal information from accidental loss and from unauthorised access, use, alteration or disclosure. However, we cannot guarantee that unauthorised third parties will never be able to defeat those measures or use your personal information for improper purposes. You acknowledge that you provide your personal information at your own risk.
-
-
-</p><h2>Part Two: Additional Legal Terms</h2>
-
-<h3>Representation and Warranties</h3>
-
-<p>You represent and warrant to us that: (a) you are at least eighteen (18) years of age; and (b) your use of this website will be in compliance with these Terms of Use.
-
-</p><h3>No Warranties</h3>
-
-<p>USE OF THIS WEBSITE IS AT YOUR OWN RISK. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE WEBSITE AND SERVICES ARE PROVIDED WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU FROM NARCONON UNITED&nbsp;KINGDOM OR THROUGH THIS WEBSITE WILL CREATE ANY WARRANTY NOT EXPRESSLY STATED HEREIN. WITHOUT LIMITING THE FOREGOING, NARCONON UNITED&nbsp;KINGDOM, ITS PROCESSORS, ITS PROVIDERS, ITS LICENSORS (AND THEIR RESPECTIVE SUBSIDIARIES, AFFILIATES, AGENTS, DIRECTORS, AND EMPLOYEES) DO NOT WARRANT THAT THE CONTENT IS ACCURATE, RELIABLE OR CORRECT; THAT THIS WEBSITE WILL MEET YOUR REQUIREMENTS; THAT THIS WEBSITE WILL BE AVAILABLE AT ANY PARTICULAR TIME OR LOCATION, UNINTERRUPTED OR SECURE; THAT ANY DEFECTS OR ERRORS WILL BE CORRECTED; OR THAT THIS WEBSITE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. ANY CONTENT DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THIS WEBSITE IS DOWNLOADED AT YOUR OWN RISK AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR PROPERTY OR LOSS OF DATA THAT RESULTS FROM SUCH DOWNLOAD.
-
-</p><p>NARCONON UNITED&nbsp;KINGDOM DOES NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THIS WEBSITE OR ANY HYPERLINKED WEBSITE OR SERVICE, OR FEATURED IN ANY BANNER OR OTHER ADVERTISING, AND NARCONON UNITED&nbsp;KINGDOM WILL NOT BE A PARTY TO OR IN ANY WAY MONITOR ANY TRANSACTION BETWEEN YOU AND THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES.
-
-</p><h3>Indemnity</h3>
-
-<p>BY VISITING THIS WEBSITE, YOU AGREE TO INDEMNIFY, DEFEND, AND HOLD HARMLESS NARCONON UNITED&nbsp;KINGDOM, AND ANY AFFILIATED NARCONON UNITED&nbsp;KINGDOM ENTITY, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, AND REPRESENTATIVES (COLLECTIVELY “NARCONON UNITED&nbsp;KINGDOM PARTIES”) FROM AND AGAINST ALL CLAIMS, ACTIONS, DEMANDS, LIABILITIES, JUDGMENTS, SETTLEMENTS, COSTS, LOSSES, DAMAGES, TAX ASSESSMENTS, PENALTIES, INTEREST AND EXPENSES (INCLUDING, WITHOUT LIMITATION, REASONABLE ATTORNEYS’ FEES) ARISING OUT OF ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, PUNITIVE OR ANY OTHER CLAIM YOU MAY INCUR IN CONNEXION WITH YOUR USE OF THIS WEBSITE, INCLUDING, WITHOUT LIMITATION, ANY CLAIMS FOR DEFAMATION, VIOLATION OF PUBLICITY OR PRIVACY, COPYRIGHT OR TRADEMARK INFRINGEMENT RESULTING FROM YOUR SUBMISSIONS OF ANY CONTENT, TAGGED CONTENT OR OTHER MATERIALS, ANY ECONOMIC HARM, LOST PROFITS, DAMAGES TO BUSINESS, DATA OR COMPUTER SYSTEMS, OR ANY DAMAGES RESULTING FROM RELIANCE ON ANY CONTENT OR RESULTING FROM ANY INTERRUPTIONS, WORK STOPPAGES, COMPUTER FAILURES, DELETION OF FILES, ERRORS, OMISSIONS, INACCURACIES, DEFECTS, VIRUSES, DELAYS OR MISTAKES OF ANY KIND, EVEN IF YOU HAVE PREVIOUSLY ADVISED NARCONON UNITED&nbsp;KINGDOM OF THE POSSIBILITY OF SUCH CLAIM. 
-
-</p><h3>Limitation of Liability and Damages</h3>
-
-<p>YOUR SOLE REMEDY FOR DISSATISFACTION WITH THE WEBSITE AND ANY OF ITS SERVICE IS TO STOP USING THE WEBSITE OR SERVICE. YOU AGREE THAT UNDER NO CIRCUMSTANCE SHALL ANY OF THE NARCONON UNITED&nbsp;KINGDOM PARTIES BE LIABLE FOR ANY DAMAGE RESULTING FROM YOUR USE OR INABILITY TO USE THIS WEBSITE OR THE MATERIALS ON THIS WEBSITE. THIS PROTECTION COVERS CLAIMS BASED ON WARRANTY, CONTRACT, TORT, STRICT LIABILITY, AND ANY OTHER LEGAL THEORY. THIS PROTECTION COVERS ALL LOSSES AND CLAIMS OF ANY TYPE INCLUDING, WITHOUT LIMITATION, DIRECT OR INDIRECT, SPECIAL, INCIDENTAL, RELIANCE, CONSEQUENTIAL, EXEMPLARY, AND PUNITIVE DAMAGES, PERSONAL INJURY/WRONGFUL DEATH, LOST PROFITS, OR DAMAGES RESULTING FROM LOST DATA OR BUSINESS INTERRUPTION.
-
-</p><h3>Disputes</h3>
-
-<p>If a dispute of any kind arises, we want to understand and address your concerns quickly and to your satisfaction. Please contact info@narcononuk.org with any dispute. If we cannot resolve your concerns, we agree to an informal and inexpensive dispute resolution process requiring individual arbitration. “Disputes” between you and Narconon United&nbsp;Kingdom, including its processors, suppliers or licensors or their respective affiliates, agents, directors or employees, are defined for the purposes of these Terms of Use to include any claim, controversy, or dispute (whether involving contract, tort, equitable, statutory, or any other legal theory) between you and Narconon United&nbsp;Kingdom including, but not limited to, any claims relating in any way to these Terms of Use (including its breach, termination, or interpretation), any other aspect of our relationship, Narconon United&nbsp;Kingdom advertising, and any use of Narconon United&nbsp;Kingdom services. 
-
-</p><h2 style="color: red">Configuration Error: Please contact the webmaster if you are seeing this message.</h2>
-<script>
-throw ("Terms of Use configuration error!");
-</script>
-
-<h3>Requests for Information</h3>
-
-<p>If you contact Narconon United&nbsp;Kingdom and request information about our programmes or services, we will use your email or postal address to provide the information you requested. You agree that we may use and share information you provide us as described in our <a href="online-privacy-notice.html">Online Privacy Notice</a>.
-
-</p><h3>Limitation on Time to Initiate a Dispute</h3>
-
-<p>Unless otherwise required by law, an action or proceeding by you relating to any Dispute must commence within one year after the cause of action accrues.
-
-</p><h3>Links to Other Web Sites</h3>
-
-<p>The Narconon United&nbsp;Kingdom website may contain links to third party websites as a convenience to you. The inclusion of any website link does imply an approval, endorsement, or recommendation by Narconon United&nbsp;Kingdom. You agree that you access any such website at your own risk, and that the site is not governed by the terms and conditions contained in these Terms of Use. Narconon United&nbsp;Kingdom expressly disclaims any liability for these websites. Please remember that when you use a link to go from our website to another website, our <a href="online-privacy-notice.html">Online Privacy Notice</a> and <a href="notice-of-privacy-practices.html">Notice of Privacy Practices</a> is no longer in effect. Your browsing and interaction on any other website, including those that have a link on our website, is subject to that website’s own rules and policies.
-
-</p><h3>Downloadable Files and Email</h3>
-
-<p>Narconon United&nbsp;Kingdom cannot and does not guarantee or warrant that email or files available for downloading from its website will be free of viruses or other code that may contaminate or destroy data on your computer. You are responsible for implementing sufficient protective procedures and cheques to maintain the accuracy of your data for maintaining a data back-up or other means for the reconstruction of any lost data.  Narconon United&nbsp;Kingdom does not assume any responsibility or risk for damage to your computer or its files related to your use of the website.
-
-</p><h3>Other Provisions</h3>
-
-<p>Except as expressly provided in these Terms of Use, these terms are a complete statement of the agreement between you and Narconon United&nbsp;Kingdom, and they describe the entire liability of Narconon United&nbsp;Kingdom and its vendors and suppliers (including processors) and your exclusive remedy with respect to your access and use of this website. In the event of a conflict between these Terms of Use and any other Narconon United&nbsp;Kingdom agreement or policy, these Terms of Use shall prevail on the subject matter of these Terms of Use. If any provision of these Terms of Use is invalid or unenforceable under applicable law, then it shall be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law, and the remaining provisions will continue in full force and effect. Headings are included for convenience only, and shall not be considered in interpreting these Terms of Use. These Terms of Use do not limit any rights that Narconon United&nbsp;Kingdom may have under trade secret, copyright, patent, or other laws. Our failure to assert any right or provision under these Terms of Use shall not constitute a waiver of such right or provision. No waiver of any term of these Terms of Use shall be deemed a further or continuing waiver of such term or any other term.
-
-</p><h3>Assignment</h3>
-<p>You may not assign any rights or obligations under this Agreement without our prior written consent. Narconon United&nbsp;Kingdom may assign all or part of this Agreement.
-</p><h3>Survival</h3>
-<p>All sections of this Agreement which, by their nature are designed to survive expiration or termination of this Agreement, including but not limited to indemnity and limitation of liability clauses, shall survive. 
-</p><h3>Waiver</h3>
-<p>No waiver of any of these Terms shall be deemed a further or continuing waiver of such term or condition or any other term or condition.
-</p><h3>Notices</h3>
-<p>You agree that we may provide any and all notices to you by e-mail, telephone, fax, as well as by any other method.
-</p><h3>Severability</h3>
-<p>If any of the provisions of this Agreement are held unenforceable by a court or other tribunal of competent jurisdiction, then those provisions shall be limited or eliminated to the minimum extent necessary to allow the remainder of this Agreement to retain its full force and effect. 
-</p><h3>Entire Agreement; Amendment</h3>
-<p>This Agreement constitutes the entire Agreement between you and Narconon United&nbsp;Kingdom applicable to its subject matter. It may not be modified except as described elsewhere in this Agreement. 
-</p><h3>Conflicting Terms</h3>
-<p>Anything on the website inconsistent or in conflict with the terms of this Agreement is superseded by the terms of this Agreement.
-</p><h3>Contact Information</h3>
-<p>You may contact Narconon United&nbsp;Kingdom with any questions or concerns regarding these Terms of Use at: 
-</p><p>
-Narconon United&nbsp;Kingdom<br>
-Grange Court, Maynard’s Green<br>
-Heathfield, East Sussex TN21 0DJ<br>
-United Kingdom<br>
-Email: info@narcononuk.org
-</p><div class="mb3">&nbsp;</div>
-<div class="clearfix prev-next-block">
-</div>
-</div>
-
-            <!-- >Welcome to  Narconon United Kingdom END -->
-        </div>
-        <div id="footer">
-        	<div id="pre-footer-links" class="clearfix footer-container">
-        		<span class="pre-footer-link pre-footer-link-logo">
-                    <a class="nn-logo" href="/">
-                        <svg class="logo-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             width="197.16px" height="51.613px" viewBox="0 0 197.16 51.613" enable-background="new 0 0 197.16 51.613" xml:space="preserve">
-                            <g id="nn_logo_green">
-                                <g>
-                                    <g>
-                                        <path id="SVGID_17_" fill="#000000" d="M120.387,0.747c0.07,0.164,0.135,0.325,0.213,0.484c2.45,5.17,4.902,10.336,7.357,15.506
-                                            c0.133,0.271,0.227,0.48-0.023,0.789c-4.312,5.312-8.603,10.636-12.912,15.95c-0.112,0.143-0.362,0.252-0.549,0.254
-                                            c-2.852,0.018-5.699-0.002-8.553,0.033c-1.246,0.02-2.482,0.203-3.585,0.876c-1.433,0.868-1.981,2.268-2.067,3.834
-                                            c-0.099,1.854-0.07,3.717-0.088,5.575c-0.011,0.729-0.004,1.458-0.004,2.247h-0.462c-4.413,0-8.824,0-13.235-0.002
-                                            c-0.242,0-0.478-0.018-0.718-0.035c-1.082-0.095-1.776-0.602-1.844-1.675c-0.111-1.562-0.111-3.144-0.009-4.709
-                                            c0.073-1.073,0.789-1.659,1.868-1.823c0.369-0.056,0.747-0.078,1.121-0.078c2.813-0.028,5.639-0.06,8.458-0.072
-                                            c0.261-0.004,0.396-0.083,0.5-0.324c0.314-0.733,0.655-1.448,0.981-2.17c0.249-0.54,0.493-1.078,0.754-1.646
-                                            c-0.159-0.013-0.247-0.02-0.335-0.02c-4.007-0.002-8.014-0.011-12.017,0.007c-0.688,0.002-1.38,0.072-2.059,0.188
-                                            c-2.36,0.394-3.759,1.679-3.973,4.035c-0.208,2.291-0.138,4.611-0.164,6.917c-0.007,0.507,0.067,1.017,0.145,1.521
-                                            c0.33,2.067,1.494,3.399,3.564,3.839c0.759,0.163,1.544,0.266,2.317,0.269c5.278,0.023,10.564,0.017,15.844,0
-                                            c0.205,0,0.468-0.123,0.595-0.278c4.132-5.087,8.257-10.186,12.372-15.284c1.018-1.259,1.006-1.28,2.602-1.021
-                                            c1.224,0.198,2.346,0.614,3.183,1.672c-3.961,4.969-7.896,9.905-11.896,14.926h0.611c1.952,0,3.902,0.016,5.852-0.004
-                                            c0.72-0.009,1.441-0.049,2.154-0.14c2.588-0.322,4.135-1.858,4.286-4.449c0.127-2.171,0.095-4.35,0.093-6.522
-                                            c0-1.35-0.227-2.658-1.031-3.802c0.039-0.063,0.066-0.114,0.105-0.164c3.67-4.608,7.344-9.223,11.021-13.823
-                                            c0.111-0.138,0.342-0.247,0.519-0.252c1.156-0.021,2.312-0.012,3.468-0.012c0.106,0.002,0.219,0.032,0.385,0.057
-                                            c-1.918,2.623-3.789,5.193-5.627,7.713c1.774,0,3.529,0.013,5.283-0.016c0.182,0,0.413-0.164,0.535-0.321
-                                            c2.848-3.658,5.68-7.323,8.518-10.991c0.074-0.1,0.141-0.211,0.229-0.349c-2.81-0.208-5.558-0.413-8.312-0.618l-0.008-0.099
-                                            c5.024-3.632,10.057-7.26,15.104-10.905c-1.025-1.158-2.021-2.273-3.04-3.42c-5.188,3.759-10.368,7.51-15.562,11.272
-                                            c-0.074-0.145-0.121-0.235-0.17-0.329c-1.973-4.055-3.942-8.107-5.91-12.167c-0.135-0.271-0.275-0.397-0.604-0.394
-                                            C124.861,0.805,120.973,0.747,120.387,0.747"/>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path id="SVGID_19_" fill="#000000" d="M157.473,46.249c-1.177-0.051-1.841-0.639-1.914-1.8c-0.096-1.4-0.113-2.815-0.031-4.217
-                                            c0.089-1.419,0.744-2.131,2.146-2.19c2.213-0.103,4.436-0.1,6.649,0c1.378,0.06,2.047,0.735,2.137,2.099
-                                            c0.101,1.472,0.062,2.964-0.053,4.438c-0.081,1.082-0.737,1.622-1.828,1.67c-1.201,0.051-2.401,0.011-3.603,0.011v0.009
-                                            c-0.69,0-1.387,0.014-2.078,0.014C158.421,46.277,157.943,46.271,157.473,46.249 M156.729,33.749
-                                            c-0.609,0.005-1.229,0.081-1.832,0.175c-2,0.319-3.412,1.342-3.914,3.384c-0.123,0.479-0.219,0.975-0.228,1.465
-                                            c-0.032,1.919-0.044,3.838-0.04,5.758c0.008,0.612,0.044,1.229,0.137,1.834c0.295,1.921,1.293,3.271,3.229,3.793
-                                            c0.603,0.166,1.229,0.301,1.851,0.312c1.684,0.041,5.045,0.122,5.045,0.122c1.959-0.063,3.93-0.048,5.885-0.215
-                                            c2.314-0.202,3.699-1.444,4.203-3.561c0.1-0.419,0.19-0.858,0.19-1.287c-0.005-2.439,0.054-4.893-0.086-7.325
-                                            c-0.131-2.332-1.464-3.725-3.747-4.206c-0.613-0.133-1.246-0.228-1.871-0.231c-1.769-0.018-3.535-0.021-5.31-0.021
-                                            C159.068,33.742,157.898,33.743,156.729,33.749"/>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path id="SVGID_21_" fill="#000000" d="M7.794,33.908c-2.085,0.016-4.17,0.01-6.255,0.01c-0.145,0-0.292,0.017-0.459,0.021
-                                            v16.368h4.638V38.483c0.164,0.217,0.255,0.33,0.343,0.453c2.663,3.682,5.327,7.358,7.979,11.048
-                                            c0.19,0.258,0.376,0.374,0.702,0.372c2.071-0.016,4.141-0.01,6.212-0.014c0.157,0,0.321-0.011,0.483-0.018V33.939h-4.602v11.736
-                                            l-0.112,0.026c-0.123-0.171-0.249-0.339-0.371-0.509c-2.637-3.645-5.274-7.288-7.906-10.938
-                                            c-0.173-0.239-0.341-0.351-0.645-0.351C7.8,33.908,7.796,33.908,7.794,33.908"/>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path id="SVGID_23_" fill="#000000" d="M175.957,33.918v16.392h4.605V38.471c0.135,0.171,0.213,0.263,0.277,0.356
-                                            c2.694,3.716,5.385,7.435,8.067,11.151c0.18,0.262,0.366,0.378,0.69,0.373c1.485-0.011,2.979-0.008,4.465-0.008
-                                            c0.603,0,1.193,0,1.791-0.003c0.146,0,0.285-0.011,0.432-0.017V33.943h-4.602v11.895c-0.227-0.305-0.367-0.497-0.502-0.687
-                                            c-2.637-3.646-5.271-7.291-7.918-10.933c-0.092-0.129-0.262-0.284-0.396-0.286c-1.486-0.015-2.97-0.017-4.462-0.017
-                                            C177.596,33.918,176.779,33.918,175.957,33.918"/>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path id="SVGID_25_" fill="#000000" d="M127.8,33.918c-0.547,0-1.098,0-1.646,0c-0.146,0-0.289,0.017-0.428,0.021v16.362h4.59
-                                            V38.479c0.177,0.223,0.285,0.354,0.389,0.494c2.662,3.681,5.327,7.356,7.979,11.048c0.178,0.247,0.371,0.334,0.668,0.33
-                                            c2.084-0.011,4.172-0.005,6.256-0.005h0.436V33.954h-4.586v11.757c-0.198-0.12-0.32-0.28-0.438-0.444
-                                            c-2.649-3.672-5.309-7.334-7.955-11.01c-0.174-0.243-0.349-0.349-0.653-0.349C130.871,33.92,129.336,33.92,127.8,33.918"/>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path id="SVGID_27_" fill="#000000" d="M35.749,34.312c-1.675,2.701-3.367,5.39-5.04,8.09c-0.183,0.293-0.384,0.396-0.724,0.396
-                                            c-1.349-0.021-2.698-0.011-4.05-0.011h-0.472v4.14h2.399c-0.719,1.159-1.401,2.256-2.099,3.376
-                                            c0.124,0.026,0.167,0.045,0.208,0.045c1.77,0,3.541,0.009,5.312-0.013c0.159,0,0.371-0.168,0.464-0.312
-                                            c0.583-0.933,1.146-1.867,1.695-2.812c0.141-0.247,0.297-0.32,0.571-0.318c2.022,0.01,4.049,0.005,6.075,0.005h0.483V42.77H36.12
-                                            c0.915-1.521,1.784-2.971,2.681-4.453c0.131,0.195,0.226,0.328,0.318,0.47c2.458,3.743,4.925,7.485,7.38,11.238
-                                            c0.161,0.243,0.326,0.335,0.616,0.328c1.5-0.016,2.999-0.005,4.5-0.005h0.895c-0.107-0.188-0.16-0.292-0.224-0.395
-                                            c-3.328-5.255-6.656-10.506-9.976-15.77c-0.145-0.23-0.309-0.271-0.546-0.27c-1.771,0.001-3.542,0.013-5.314-0.011
-                                            c-0.007,0-0.012,0-0.02,0C36.093,33.906,35.921,34.035,35.749,34.312"/>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path id="SVGID_29_" fill="#000000" d="M55.208,33.918h-0.492v16.396h4.574v-12.3h0.587c2.338,0,4.677,0,7.016,0.003
-                                            c0.433,0,0.87,0.013,1.303,0.041c0.951,0.062,1.375,0.488,1.437,1.44c0.016,0.256,0.014,0.514,0.009,0.768
-                                            c-0.023,1.463-0.81,2.241-2.271,2.247c-1.318,0.005-2.641,0.002-3.958,0.002h-0.514c0.08,0.125,0.097,0.164,0.124,0.199
-                                            c2.189,2.47,4.371,4.938,6.57,7.396c0.118,0.135,0.355,0.223,0.535,0.227c1.8,0.018,3.601,0.011,5.401,0.009
-                                            c0.109,0,0.223-0.021,0.403-0.041c-1.672-1.797-3.287-3.535-4.942-5.318c0.296-0.103,0.526-0.201,0.771-0.25
-                                            c1.326-0.295,2.007-1.174,2.215-2.465c0.27-1.686,0.27-3.384,0.018-5.062c-0.282-1.877-1.225-2.833-2.955-3.162
-                                            c-0.468-0.088-0.953-0.123-1.43-0.125c-2.401-0.004-4.801-0.004-7.202-0.004C60.007,33.918,57.608,33.918,55.208,33.918"/>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path id="SVGID_31_" fill="#000000" d="M131.986,2.635c-1.577,1.467-1.651,3.816-0.166,5.347c0.861,0.884,1.923,1.297,3.156,1.32
-                                            c0.354-0.048,0.721-0.062,1.062-0.155c1.515-0.404,2.597-1.308,2.991-2.861c0.369-1.43-0.059-2.672-1.133-3.669
-                                            c-0.799-0.741-1.865-1.11-2.935-1.11C133.883,1.504,132.799,1.883,131.986,2.635"/>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </a>    
-                    <span class="reg">&reg;</span>
-                </span>
-        		<span class="pre-footer-link pre-footer-link-address" itemscope itemtype="http://schema.org/Organization" itemid="http://www.narcononuk.org.uk/">
-            		<span itemprop="name"><strong>Narconon United Kingdom</strong></span>
-            		<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <address>
-                            <span itemprop="streetAddress">Grange Court, Maynard’s Green</span>, 
-                            <span itemprop="addressLocality">Heathfield</span>, 
-                            <span itemprop="addressRegion">East Sussex</span> 
-                            <span itemprop="postalCode">TN21 0DJ</span>, 
-                            <span itemprop="addressRegion">United Kingdom</span>
-                        </address>
-                    </span>
-        		</span>
-        	</div>
-
-        	<div id="copyright" class="clearfix footer-container">
-        		<div class="copyright-inner" itemscope itemtype="http://schema.org/Organization" itemid="http://www.narcononuk.org.uk/">
-        			<meta itemprop="telephone" content="01435512460">
-        			<div>
-                        <a href="tmnotice.html">© 2015  
-        				<span itemprop="name">Narconon United Kingdom</span>. 
-        				All Rights Reserved.</a> &nbsp;&bull;&nbsp; <a href="online-privacy-notice.html">Online Privacy Notice</a> &nbsp;&bull;&nbsp; <a href="terms-of-use.html">Terms of Use</a> &nbsp;&bull;&nbsp; <a href="notice-of-privacy-practices.html">Notice of Privacy Practices</a> &nbsp;&bull;&nbsp; <a href="disclaimer.html">Disclaimer: Individual results are not guaranteed and may&nbsp;vary.</a> <br/>&nbsp;
-                    </div>
-        			<div class="copyright-end-line">Narconon and the Narconon logo are trademarks and service marks owned by the Association for Better Living and Education International and are used with its permission.
-                    </div>
-        		</div>
-        		
-        		<div>Narconon United Kingdom is a Charitable Incorporated Organisation registered in England and Wales (Registered number 1159334) and registered with the Care Quality Commission.</div>
-        		
-        		<!-- cookie notice here if applicable -->
-        		<div class="small-cookie-notice" style="display:none">
-        			Cookies help our website work properly. By using our website, you agree to our use of cookies.
-        			&nbsp; 
-        			<a class="okbtn" href="#">OK</a>&nbsp;
-        			| &nbsp;<a class="morebtn" href="online-privacy-notice.html" target="_blank">read more</a>
-        		</div>
-        	</div>
-        </div>
-    </div>
-    <script>
-        if (window.jQuery) for (var f in documentReadyHolder) documentReadyHolder[f]($);
-        window.webshim && webshim.polyfill('forms');
-    </script>
-
-</body>
+      </p><h3>Information on this Website is Not Professional Advice</h3>
+
+      <p>All data, information, text, graphics, links, and other material on this website are provided as a convenience to our website visitors. The information provided on this website is for general informational and educational purposes only. The information provided on our website is not intended to serve as medical or other professional advice and is not to be used for diagnosis or treatment of any condition or symptom. Information provided on this website does not constitute the provision or practise of medical or professional health care advice or services.
+
+      </p><p>You should consult your physician or other qualified health care provider regarding any specific questions you may have. You should never disregard professional advice or delay in seeking treatment based on the information contained on this website or other websites linked to or from it.
+
+      </p><h3>Restricted Use</h3>
+
+      <p>You may use this website only to the extent that you obey all laws, rules, and regulations applicable to your use of this website.
+
+      </p><h3>Your Privacy</h3>
+
+      <p>Upon acceptance of these Terms of Use you confirm that you have read, understood, and accepted our <a href="online-privacy-notice.html">Online Privacy Notice</a>.
+
+      </p><h3>Social Media and Online Communities</h3>
+
+      <p>Narconon United&nbsp;Kingdom may provide you opportunities to share information on third party social media sites or platforms such as Facebook, Instagram, LinkedIn, Twitter, Google+, or other similar sites (collectively, “Social Media Sites”). Narconon United&nbsp;Kingdom may also provide you opportunities to participate in online communities on such Social Media Sites and may host discussion boards, chats, and other forums on this website. For example, you may use your Instagram handle and tag your photos and postings (“Tagged Content”) with the hashtag #narconon (or other hashtags as we may provide from time to time) in order to submit your Tagged Content for potential use on our website. If you post Tagged Content with the hashtag #narconon (or other hashtags as we may provide), your activity and participation is governed by these Terms of Use. Additionally, you remain responsible for your compliance with other applicable terms and conditions such as those of Instagram or other Social Media Sites. Without limitation of any other obligations, you agree that you will be respectful of others and their privacy and will not submit photos of others without their express permission.  
+
+      </p><p>If you participate in any Narconon United&nbsp;Kingdom online community, discussion board or other forum, you agree that anything you submit is being provided by you voluntarily, on a non-confidential basis, and without any compensation due to you and you grant Narconon United&nbsp;Kingdom a perpetual, worldwide, royalty-free, transferable, and sub-licensable, right and licence to use, copy, distribute, modify, create joint and derivative works, your content, postings and Tagged Content in any form or format. You further agree that (a) you will not post, transmit, or link to any material, websites, Tagged Content or other information or content that is libellous, defamatory, false, obscene, indecent, lewd, violent, abusive, threatening, harassing, discriminatory, or an expression of political or hate speech; (b) you may only post, upload or transmit photos or materials for which you have the copyright or other permission to distribute electronically citing the original source; (c) you may not violate, plagiarise, or infringe on the rights of third parties, including copyright, trademark, trade secret, privacy, personal, publicity, moral or proprietary rights; (d) you agree that any Tagged Content or materials you post or upload will be owned by you or be in the public domain; (e) you may not intentionally post, create, upload or transmit any software or other material that contains a virus or other harmful code or device; (f) you may not solicit other users, or distribute advertising, for products or services through the website, distribute chain letters or messages, mass mailings or bulk email or other bulk messages, or gather email addresses for the purpose of sending bulk email or other messages to other users of the website; (g) if you choose to submit Tagged Content or post items in public or “chat” portions of the website, such material, information, photographs, and other information you post in these public or group areas is available to the other individuals using website and Narconon United&nbsp;Kingdom does not warrant, guarantee or otherwise take steps to prevent other users from copying, displaying, uploading, transmitting or otherwise using your material, information, photographs or other information for any purpose whatsoever; (h) you will always use caution in posting personally identifying information, and never exchange personal financial information, address, phone numbers or other personal information; (i) you will not post any material that violates any law or regulation; (j) you will not impersonate any other person or use the identity of some other living person; and (k) your postings will truthfully reflect your own experience.  
+
+      </p><p>Narconon United&nbsp;Kingdom may terminate or restrict your access to any Narconon United&nbsp;Kingdom online community, including access through the website. 
+
+      </p><h3>Selection and Removal of Tagged Content</h3>
+
+      <p>Narconon United&nbsp;Kingdom will review Tagged Content and select certain Tagged Content for posting on our website; we make no guarantee that your Tagged Content will be posted.  Notwithstanding the foregoing, you remain fully responsible and liable for your Tagged Content and its compliance with these Terms of Use, other applicable terms of use and applicable laws.  If your Tagged Content is posted to our website, you may request removal of your Tagged Content by marking it as “private” in your Social Media Site account or by email us at info@narcononuk.org.
+
+      </p><h3>Monitoring</h3>
+
+      <p>We have no obligation to monitor any related websites, chats, discussion boards or any other materials that you or third parties transmit or post on or to the website or related websites, if any. However, you acknowledge and agree that we have the right (but not the obligation) to monitor the website, discussion boards, the chats, and the materials you transmit or post; to alter or remove any such materials (including, without limitation, any posting to a chat or discussion board); and to disclose such materials and the circumstances surrounding their transmission to any third party in order to operate the website properly, to protect ourselves, our sponsors, and our other clients and visitors, and to comply with legal obligations or governmental requests.
+
+
+      </p><h3>Copyright Notice</h3>
+
+      <p>This website is owned and operated by Narconon United&nbsp;Kingdom.  The entire contents and design of the site are protected by U.S. and international copyright law. All rights regarding the website and materials contained on the website are either owned by Narconon United&nbsp;Kingdom, are licensed to it, or are used with permission.  Narconon United&nbsp;Kingdom and its licensors retain and reserve all proprietary rights to the contents of this website. 
+
+      </p><p>You may not copy, republish, upload, post, display, transmit, or frame any of these materials without prior written consent from Narconon United&nbsp;Kingdom.  You may link to, view, download, use, display and print a single copy of the materials found on this website only for personal, noncommercial, and informational purposes as long as: (1) you do not alter or modify the materials in any way; (2) you include all applicable copyright, trademark and other notices and disclaimers; and (3) you do not use the materials in a way that suggests an association with Narconon United&nbsp;Kingdom or an affiliated entity.  All such copies must include, at a minimum, the following copyright notice:  “Copyright © 2015 Narconon United&nbsp;Kingdom.  All rights reserved.”  Any other use of the website or the information contained here is strictly prohibited. Narconon United&nbsp;Kingdom may terminate the above licence at any time for any reason. If you breach any of these terms your licence terminates immediately and automatically and without notice. Upon the termination of this licence you must stop using this site, including all content, and return or destroy all copies, including electronic copies, of the content in your possession or control. 
+
+      </p><h3>Trademark Notice</h3>
+
+      <p>Narconon United&nbsp;Kingdom names and logos and all related product and service names, design marks, and slogans are the trademarks or service marks of Narconon United&nbsp;Kingdom. All rights are reserved.  You are not authorised to use any Narconon United&nbsp;Kingdom name or mark in any advertisement, publicity or in any other commercial manner without prior written consent of Narconon United&nbsp;Kingdom.  All other trademarks appearing on the website are the property of their respective owners.   
+
+      </p><h3>Online Store</h3>
+
+      <p>Narconon United&nbsp;Kingdom is not responsible for the content of any products other than those specifically published by Narconon United&nbsp;Kingdom and does not guarantee that any product is currently available, merchantable, or suitable to a particular purpose. 
+
+      </p><h3>Making Purchases</h3>
+
+      <p>Certain books, products, services, or other items may be advertised or offered for sale on or in conjunction with the website. If you wish to purchase an item, you may be asked by Narconon United&nbsp;Kingdom or an applicable third party to supply certain information, including, but not limited to, credit card or other payment information. You agree to provide Narconon United&nbsp;Kingdom or such third party with information that is truthful, accurate, complete, and current, and to comply with the terms and conditions of any agreement that you enter in connexion with your purchase of any product or service. Narconon United&nbsp;Kingdom is not responsible for any errors in shipping information provided by you or for a non-secure ship-to location. You are responsible for all activity by and charges incurred by users of your account, credit card or other payment mechanism, as well as for paying any applicable taxes. Any pricing of items is subject to change without notice, and any order is not deemed accepted by us until we ship or deliver the product(s) to you. We may correct at any time, including after shipment, pricing or similar errors, including but not limited to typos or outdated pricing.   
+
+      </p><p>We reserve the right, without prior notification, to change the descriptions, images or listings of, or links or references to, products and/or services on the website (collectively, “Product Offerings”), or to limit the order quantity on any product or service and/or refuse service to you.
+
+      </p><h3>Security</h3>
+
+      <p>We have implemented administrative, technical, and physical safeguards designed to secure your personal information from accidental loss and from unauthorised access, use, alteration or disclosure. However, we cannot guarantee that unauthorised third parties will never be able to defeat those measures or use your personal information for improper purposes. You acknowledge that you provide your personal information at your own risk.
+
+
+      </p><h2>Part Two: Additional Legal Terms</h2>
+
+      <h3>Representation and Warranties</h3>
+
+      <p>You represent and warrant to us that: (a) you are at least eighteen (18) years of age; and (b) your use of this website will be in compliance with these Terms of Use.
+
+      </p><h3>No Warranties</h3>
+
+      <p>USE OF THIS WEBSITE IS AT YOUR OWN RISK. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE WEBSITE AND SERVICES ARE PROVIDED WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU FROM NARCONON UNITED&nbsp;KINGDOM OR THROUGH THIS WEBSITE WILL CREATE ANY WARRANTY NOT EXPRESSLY STATED HEREIN. WITHOUT LIMITING THE FOREGOING, NARCONON UNITED&nbsp;KINGDOM, ITS PROCESSORS, ITS PROVIDERS, ITS LICENSORS (AND THEIR RESPECTIVE SUBSIDIARIES, AFFILIATES, AGENTS, DIRECTORS, AND EMPLOYEES) DO NOT WARRANT THAT THE CONTENT IS ACCURATE, RELIABLE OR CORRECT; THAT THIS WEBSITE WILL MEET YOUR REQUIREMENTS; THAT THIS WEBSITE WILL BE AVAILABLE AT ANY PARTICULAR TIME OR LOCATION, UNINTERRUPTED OR SECURE; THAT ANY DEFECTS OR ERRORS WILL BE CORRECTED; OR THAT THIS WEBSITE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. ANY CONTENT DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THIS WEBSITE IS DOWNLOADED AT YOUR OWN RISK AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR PROPERTY OR LOSS OF DATA THAT RESULTS FROM SUCH DOWNLOAD.
+
+      </p><p>NARCONON UNITED&nbsp;KINGDOM DOES NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THIS WEBSITE OR ANY HYPERLINKED WEBSITE OR SERVICE, OR FEATURED IN ANY BANNER OR OTHER ADVERTISING, AND NARCONON UNITED&nbsp;KINGDOM WILL NOT BE A PARTY TO OR IN ANY WAY MONITOR ANY TRANSACTION BETWEEN YOU AND THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES.
+
+      </p><h3>Indemnity</h3>
+
+      <p>BY VISITING THIS WEBSITE, YOU AGREE TO INDEMNIFY, DEFEND, AND HOLD HARMLESS NARCONON UNITED&nbsp;KINGDOM, AND ANY AFFILIATED NARCONON UNITED&nbsp;KINGDOM ENTITY, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, AND REPRESENTATIVES (COLLECTIVELY “NARCONON UNITED&nbsp;KINGDOM PARTIES”) FROM AND AGAINST ALL CLAIMS, ACTIONS, DEMANDS, LIABILITIES, JUDGMENTS, SETTLEMENTS, COSTS, LOSSES, DAMAGES, TAX ASSESSMENTS, PENALTIES, INTEREST AND EXPENSES (INCLUDING, WITHOUT LIMITATION, REASONABLE ATTORNEYS’ FEES) ARISING OUT OF ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, PUNITIVE OR ANY OTHER CLAIM YOU MAY INCUR IN CONNEXION WITH YOUR USE OF THIS WEBSITE, INCLUDING, WITHOUT LIMITATION, ANY CLAIMS FOR DEFAMATION, VIOLATION OF PUBLICITY OR PRIVACY, COPYRIGHT OR TRADEMARK INFRINGEMENT RESULTING FROM YOUR SUBMISSIONS OF ANY CONTENT, TAGGED CONTENT OR OTHER MATERIALS, ANY ECONOMIC HARM, LOST PROFITS, DAMAGES TO BUSINESS, DATA OR COMPUTER SYSTEMS, OR ANY DAMAGES RESULTING FROM RELIANCE ON ANY CONTENT OR RESULTING FROM ANY INTERRUPTIONS, WORK STOPPAGES, COMPUTER FAILURES, DELETION OF FILES, ERRORS, OMISSIONS, INACCURACIES, DEFECTS, VIRUSES, DELAYS OR MISTAKES OF ANY KIND, EVEN IF YOU HAVE PREVIOUSLY ADVISED NARCONON UNITED&nbsp;KINGDOM OF THE POSSIBILITY OF SUCH CLAIM. 
+
+      </p><h3>Limitation of Liability and Damages</h3>
+
+      <p>YOUR SOLE REMEDY FOR DISSATISFACTION WITH THE WEBSITE AND ANY OF ITS SERVICE IS TO STOP USING THE WEBSITE OR SERVICE. YOU AGREE THAT UNDER NO CIRCUMSTANCE SHALL ANY OF THE NARCONON UNITED&nbsp;KINGDOM PARTIES BE LIABLE FOR ANY DAMAGE RESULTING FROM YOUR USE OR INABILITY TO USE THIS WEBSITE OR THE MATERIALS ON THIS WEBSITE. THIS PROTECTION COVERS CLAIMS BASED ON WARRANTY, CONTRACT, TORT, STRICT LIABILITY, AND ANY OTHER LEGAL THEORY. THIS PROTECTION COVERS ALL LOSSES AND CLAIMS OF ANY TYPE INCLUDING, WITHOUT LIMITATION, DIRECT OR INDIRECT, SPECIAL, INCIDENTAL, RELIANCE, CONSEQUENTIAL, EXEMPLARY, AND PUNITIVE DAMAGES, PERSONAL INJURY/WRONGFUL DEATH, LOST PROFITS, OR DAMAGES RESULTING FROM LOST DATA OR BUSINESS INTERRUPTION.
+
+      </p><h3>Disputes</h3>
+
+      <p>If a dispute of any kind arises, we want to understand and address your concerns quickly and to your satisfaction. Please contact info@narcononuk.org with any dispute. If we cannot resolve your concerns, we agree to an informal and inexpensive dispute resolution process requiring individual arbitration. “Disputes” between you and Narconon United&nbsp;Kingdom, including its processors, suppliers or licensors or their respective affiliates, agents, directors or employees, are defined for the purposes of these Terms of Use to include any claim, controversy, or dispute (whether involving contract, tort, equitable, statutory, or any other legal theory) between you and Narconon United&nbsp;Kingdom including, but not limited to, any claims relating in any way to these Terms of Use (including its breach, termination, or interpretation), any other aspect of our relationship, Narconon United&nbsp;Kingdom advertising, and any use of Narconon United&nbsp;Kingdom services. 
+
+      <h3>Requests for Information</h3>
+
+      <p>If you contact Narconon United&nbsp;Kingdom and request information about our programmes or services, we will use your email or postal address to provide the information you requested. You agree that we may use and share information you provide us as described in our <a href="online-privacy-notice.html">Online Privacy Notice</a>.
+
+      </p><h3>Limitation on Time to Initiate a Dispute</h3>
+
+      <p>Unless otherwise required by law, an action or proceeding by you relating to any Dispute must commence within one year after the cause of action accrues.
+
+      </p><h3>Links to Other Web Sites</h3>
+
+      <p>The Narconon United&nbsp;Kingdom website may contain links to third party websites as a convenience to you. The inclusion of any website link does imply an approval, endorsement, or recommendation by Narconon United&nbsp;Kingdom. You agree that you access any such website at your own risk, and that the site is not governed by the terms and conditions contained in these Terms of Use. Narconon United&nbsp;Kingdom expressly disclaims any liability for these websites. Please remember that when you use a link to go from our website to another website, our <a href="online-privacy-notice.html">Online Privacy Notice</a> and <a href="notice-of-privacy-practices.html">Notice of Privacy Practices</a> is no longer in effect. Your browsing and interaction on any other website, including those that have a link on our website, is subject to that website’s own rules and policies.
+
+      </p><h3>Downloadable Files and Email</h3>
+
+      <p>Narconon United&nbsp;Kingdom cannot and does not guarantee or warrant that email or files available for downloading from its website will be free of viruses or other code that may contaminate or destroy data on your computer. You are responsible for implementing sufficient protective procedures and cheques to maintain the accuracy of your data for maintaining a data back-up or other means for the reconstruction of any lost data.  Narconon United&nbsp;Kingdom does not assume any responsibility or risk for damage to your computer or its files related to your use of the website.
+
+      </p><h3>Other Provisions</h3>
+
+      <p>Except as expressly provided in these Terms of Use, these terms are a complete statement of the agreement between you and Narconon United&nbsp;Kingdom, and they describe the entire liability of Narconon United&nbsp;Kingdom and its vendors and suppliers (including processors) and your exclusive remedy with respect to your access and use of this website. In the event of a conflict between these Terms of Use and any other Narconon United&nbsp;Kingdom agreement or policy, these Terms of Use shall prevail on the subject matter of these Terms of Use. If any provision of these Terms of Use is invalid or unenforceable under applicable law, then it shall be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law, and the remaining provisions will continue in full force and effect. Headings are included for convenience only, and shall not be considered in interpreting these Terms of Use. These Terms of Use do not limit any rights that Narconon United&nbsp;Kingdom may have under trade secret, copyright, patent, or other laws. Our failure to assert any right or provision under these Terms of Use shall not constitute a waiver of such right or provision. No waiver of any term of these Terms of Use shall be deemed a further or continuing waiver of such term or any other term.
+
+      </p><h3>Assignment</h3>
+      <p>You may not assign any rights or obligations under this Agreement without our prior written consent. Narconon United&nbsp;Kingdom may assign all or part of this Agreement.
+      </p><h3>Survival</h3>
+      <p>All sections of this Agreement which, by their nature are designed to survive expiration or termination of this Agreement, including but not limited to indemnity and limitation of liability clauses, shall survive. 
+      </p><h3>Waiver</h3>
+      <p>No waiver of any of these Terms shall be deemed a further or continuing waiver of such term or condition or any other term or condition.
+      </p><h3>Notices</h3>
+      <p>You agree that we may provide any and all notices to you by e-mail, telephone, fax, as well as by any other method.
+      </p><h3>Severability</h3>
+      <p>If any of the provisions of this Agreement are held unenforceable by a court or other tribunal of competent jurisdiction, then those provisions shall be limited or eliminated to the minimum extent necessary to allow the remainder of this Agreement to retain its full force and effect. 
+      </p><h3>Entire Agreement; Amendment</h3>
+      <p>This Agreement constitutes the entire Agreement between you and Narconon United&nbsp;Kingdom applicable to its subject matter. It may not be modified except as described elsewhere in this Agreement. 
+      </p><h3>Conflicting Terms</h3>
+      <p>Anything on the website inconsistent or in conflict with the terms of this Agreement is superseded by the terms of this Agreement.
+      </p><h3>Contact Information</h3>
+      <p>You may contact Narconon United&nbsp;Kingdom with any questions or concerns regarding these Terms of Use at: 
+      </p><p>
+      Narconon United&nbsp;Kingdom<br>
+      Grange Court, Maynard’s Green<br>
+      Heathfield, East Sussex TN21 0DJ<br>
+      United Kingdom<br>
+      Email: info@narcononuk.org
+      </div>
+
+    </body>
 </html>

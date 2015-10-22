@@ -1,4 +1,5 @@
 ($)(function(){
+    /* */
     var phone_format = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
     var email_format = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     var names_format = /^[a-zA-Z \.]+$/;
@@ -10,15 +11,6 @@
         $("#contact_us_form form")[0].reset();
         $("body").css("overflow","hidden");
         unset_message();
-
-        function overlay_anim_end(){
-            $("#contact_us_form div.form_container")
-            .css("display","inline-block")
-            .addClass("animated bounceInDown");
-        }
-        function box_anim_end(){
-            $(this).css(box_css);
-        }
 
         $("#contact_us_form div.form_container")
             .removeClass("animated fadeOutUp")
@@ -36,7 +28,6 @@
     }
     var hide_form = function(){
 
-        
         $("#contact_us_form div.form_container")
             .removeClass("animated bounceInDown")
             .addClass("animated fadeOutUp")
