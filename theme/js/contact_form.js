@@ -69,7 +69,6 @@
 
         setTimeout(function(){
             var name = $("#contact_us_form input[name='name']");
-            var assoc = $("#contact_us_form input[name='assoc']");
             var phone = $("#contact_us_form input[name='phone']");
             var email = $("#contact_us_form input[name='email']");
 
@@ -134,7 +133,29 @@
                     set_message(errors[0]);
                 }
             }else{
-                $("#contact_us_form form").submit();
+                var stamp = new Date();
+                var name = $("#contact_us_form input[name='name']");
+                var phone = $("#contact_us_form input[name='phone']");
+                var email = $("#contact_us_form input[name='email']");
+                var details = {
+                        'timestamp' : stamp,
+                        'name' : name.val(),
+                        'tel'  : phone.val(),
+                        'email': email.val()
+                    }
+                $.ajax({
+                    type : "post",
+                    url : "https://zapier.com/hooks/catch/32f0bd/",
+                    data : details,
+                    success : function(response) {
+                        if(response.status == "success") {
+                            top.location = "thankyou.html";
+                        }
+                        else {
+                            alert("Unknown error encountered.");
+                        }
+                    }
+                })
             }
             $("#contact_us_form input").popover({trigger:'focus'});
         },100);
