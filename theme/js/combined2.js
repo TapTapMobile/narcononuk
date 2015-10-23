@@ -827,6 +827,7 @@ if (globalGetParams && globalGetParams.source) {
     d.setDate(d.getDate() + 14);
     cookieMonster.set('trackingSource', globalGetParams.src, d, '/');
 }
+
 (function() {
     var method;
     var noop = function() {};
@@ -840,6 +841,7 @@ if (globalGetParams && globalGetParams.source) {
         }
     }
 }());;
+
 cookieMonster.remove('geolocated');
 cookieMonster.remove('html5_geolocated');
 var globalGeolocationData;
@@ -5602,7 +5604,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
             d.offset = d.offset || {}, null != d.offsetBottom && (d.offset.bottom = d.offsetBottom), null != d.offsetTop && (d.offset.top = d.offsetTop), b.call(c, d)
         })
     })
-}(jQuery);;;
+}(jQuery);
 (function($, window, document, undefined) {
     var drag, state, e;
     drag = {
@@ -14110,27 +14112,6 @@ if (!window.globalNoCloning) {
         });
     });
 }
-new function() {
-    var parallaxParentElem = document.getElementById('main_parallax_parent');
-    if (!parallaxParentElem) return;
-    var scrolled = cookieController.get('parallaxScollPos');
-    var lastPage = cookieController.get('parallaxScollPosLastPage');
-    if (scrolled && lastPage == location.pathname) {
-        parallaxParentElem.scrollTop = parseInt(scrolled);
-        setTimeout(function() {
-            parallaxParentElem.scrollTop = parseInt(scrolled);
-        }, 0);
-    }
-    var scrollMeasureTimer = 0;
-    cookieController.set('parallaxScollPosLastPage', location.pathname, void 0, '/');
-    $('#main_parallax_parent').on('scroll', function() {
-        if (scrollMeasureTimer > 0) return;
-        scrollMeasureTimer = setTimeout(function() {
-            cookieController.set('parallaxScollPos', parseInt(parallaxParentElem.scrollTop), void 0, '/');
-            scrollMeasureTimer = 0;
-        }, 500);
-    });
-};
 var AnimationController = function(opts) {
     if (opts)
         for (var key in opts) this[key] = opts[key];
@@ -14256,51 +14237,6 @@ AnimationController.prototype = (function() {
     return me;
 })();
 globalAnimationController = new AnimationController();;
-
-function global_geolocation_done(data) {
-    if (!data || !data.NearestOrgs || !data.NearestOrgs.length) {
-        $('body').removeClass('phone-number-detection-ip');
-        return $(document).trigger('custom_geolocation_completed', [globalCurrentCenter]);
-    }
-    var nearestOrg;
-    for (var o in data.NearestOrgs) {
-        var oo = data.NearestOrgs[o];
-        if (!oo || !oo.Org) continue;
-        if (!oo.Org.Type || oo.Org.Type == 'drug_education_center') continue;
-        if (!oo.Org.Id || oo.Org.Id == 'narconon-ojai') continue;
-        nearestOrg = oo.Org;
-        break;
-    }
-    if (!nearestOrg) {
-        $('body').removeClass('phone-number-detection-ip');
-        return $(document).trigger('custom_geolocation_completed', [globalCurrentCenter]);
-    }
-    var countryId = $('body').attr('data-region-id');
-    if (countryId) {
-        nearestOrg = void 0;
-        for (var o in data.NearestOrgs) {
-            var oo = data.NearestOrgs[o];
-            if (!oo || !oo.Org) continue;
-            if (!oo.Org.CountryCode || oo.Org.CountryCode.toLowerCase() != countryId.toLowerCase()) continue;
-            if (!oo.Org.Type || oo.Org.Type == 'drug_education_center') continue;
-            if (!oo.Org.Id || oo.Org.Id == 'narconon-ojai') continue;
-            nearestOrg = oo.Org;
-            break;
-        }
-    }
-    if (!nearestOrg) {
-        $('body').removeClass('phone-number-detection-ip');
-        return $(document).trigger('custom_geolocation_completed', [globalCurrentCenter]);
-    }
-    var bestNumber = nearestOrg.Csitollfreetelephonenumber || nearestOrg.Tollfreetelephonenumber || nearestOrg.Phone || nearestOrg.Facsimiletelephonenumber || '';
-    $(document).ready(function() {
-        $('.autofill-phone-number').text(bestNumber);
-        $('.autofill-center-name').text(nearestOrg.FullName);
-        $('.autofill-phone-number-href').attr('href', 'tel:+' + bestNumber.replace(/[^0-9]+/g, ''));
-        $('body').removeClass('phone-number-detection-ip');
-    });
-    $(document).trigger('custom_geolocation_completed', [nearestOrg]);
-}
 if ($('body').hasClass('narconon-center-site')) {
     $('body').removeClass('phone-number-detection-ip');
     $(document).ready(function() {
@@ -14357,4 +14293,4 @@ $(document).ready(function() {
             return false;
         }, true);
     }
-});;
+});
