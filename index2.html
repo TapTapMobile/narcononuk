@@ -272,17 +272,17 @@
             margin-right: auto;
             display: inline-block;
         }
-        #jumbotron_banner .jumbotron-content .hex-image {
-            width: 20%;
-            display: inline-block;
-        }
+        #jumbotron_banner .jumbotron-content .hex-image,
         #jumbotron_banner .jumbotron-content .carf-image {
             width: 20%;
             display: inline-block;
+            text-align: center
         }
-        #jumbotron_banner .jumbotron-content .hex-image img,
-        #jumbotron_banner .jumbotron-content .carf-image img {
+        #jumbotron_banner .jumbotron-content .hex-image img {
             width: 100%;
+        }
+        #jumbotron_banner .jumbotron-content .carf-image img {
+            width: 80%;
         }
         #jumbotron_banner .jumbotron-content .message {
             width: 50%;
@@ -328,11 +328,41 @@
         }
         @media (max-width: 650px) {
             #jumbotron_banner .jumbotron-content .hex-image,
+            #jumbotron_banner .jumbotron-content .carf-image {
+                display: block;
+                width: 100%;
+            }
+            #jumbotron_banner .jumbotron-content .hex-image img {
+                display: inline;
+                width: 30%;
+                margin: auto;
+            }
+            #jumbotron_banner .jumbotron-content .carf-image {
+                margin-top: 0.5em;
+            }
             #jumbotron_banner .jumbotron-content .carf-image img {
-                display: none;
+                display: inline;
+                width: 22%;
             }
             #jumbotron_banner .jumbotron-content .message {
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 width: 100%;
+            }
+            #jumbotron_banner .jumbotron-content .message p.title {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+            #jumbotron_banner .jumbotron-content .message p.sans {
+                display: none;
+            }
+        }
+        @media (max-width: 400px) {
+            #videobox div.title,
+            #videobox a.category {
+                width: 50% !important;
+                font-size: 0.8em !important;
             }
         }
     </style>
@@ -568,7 +598,7 @@
                         </div>
                     </div>
                     <div class="carf-image">
-                        <img src="theme/images/cqc-logo.jpg" style="border-radius:10px;width:80%" />
+                        <img src="theme/images/cqc-logo.jpg" style="border-radius:10px" />
                     </div>
                 </div>
             </div>
