@@ -1155,21 +1155,18 @@
                     <div class="copyright-inner" itemscope itemtype="http://schema.org/Organization" itemid="http://www.narcononuk.org.uk/">
                         <meta itemprop="telephone" content="01435512460">
                         <div>
-                            <a class="iframe_link" rel="Copyright and Trademark Notice" href="tmnotice.html">
-                                © 2015  
-                                <span itemprop="name">Narconon United Kingdom</span>. 
-                                All Rights Reserved.
+                            <a href="tmnotice.html">
+                                © 2015 <span itemprop="name">Narconon United Kingdom</span>. All Rights Reserved.
                             </a>
-                            &nbsp;&bull;&nbsp;
-                            <a class="iframe_link" rel="Online Privacy Notice" href="online-privacy-notice.html">Online Privacy Notice</a>
-                            &nbsp;&bull;&nbsp;
-                            <a class="iframe_link" rel="Terms of Use" href="terms-of-use.html">Terms of Use</a>
-                            &nbsp;&bull;&nbsp;
-                            <a class="iframe_link" rel="Notice of Privacy Practices" href="notice-of-privacy-practices.html">Notice of Privacy Practices</a>
-                            &nbsp;&bull;&nbsp;
-                            <a class="iframe_link" rel="Disclaimer" href="disclaimer.html">Disclaimer: Individual results are not guaranteed and may&nbsp;vary.</a>
-                            <br />
-                            &nbsp;
+                             &nbsp;&bull;&nbsp; 
+                            <a href="online-privacy-notice.html">Online Privacy Notice</a>
+                             &nbsp;&bull;&nbsp; 
+                            <a href="terms-of-use.html">Terms of Use</a>
+                             &nbsp;&bull;&nbsp; 
+                            <a href="notice-of-privacy-practices.html">Notice of Privacy Practices</a>
+                             &nbsp;&bull;&nbsp; 
+                            <a href="disclaimer.html">Disclaimer: Individual results are not guaranteed and may&nbsp;vary.</a> 
+                            <br/>&nbsp;
                         </div>
                         <div class="copyright-end-line">Narconon and the Narconon logo are trademarks and service marks owned by the Association for Better Living and Education International and are used with its permission.
                         </div>
@@ -1489,7 +1486,7 @@
 
     <!-- Contact Form -->
     <div id="contact_us_form" class="fullscreen_overlay">
-        <div class="form_container modal_box_container">
+        <div class="form_container">
             <form method="post" action="thankyou.html">
                 <div class="modal-header">
                     <button type="button" class="close" role="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -1527,66 +1524,5 @@
     </div>
     <!-- Contact Form JS -->
     <script src="theme/js/contact_form.js"></script>
-
-    <!-- Document Modal -->
-    <div id="document_modal" class="fullscreen_overlay">
-        <div class="modal_box_container">
-            <div class="modal-header">
-                <button type="button" role="close" class="close" role="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3>Header</h3>
-            </div>
-            <div class="modal-body">
-                <div class="loader"></div>
-                <iframe class="content_documents" src="" onload="$('#document_modal div.loader').css('display','none')"></iframe>
-            </div>
-            <div class="modal-footer">
-                <button role="close" class="btn btn-danger btn-sm">Close</button>
-            </div>
-        </div>
-    </div>
-    <!-- Document Modal -->
-    <script>
-        ($)(function(){
-            var open_modal = function(event){
-                event.preventDefault();
-                var title = $(this).attr('rel');
-                var link = $(this).attr('href');
-                $("body").css("overflow","hidden");
-                $("#document_modal div.loader").css("display","block");
-                $("#document_modal div.modal-header h3").text(title);
-                $("#document_modal div.modal_box_container")
-                    .removeClass("animated fadeOutUp")
-                    .css("animation-delay","200ms")
-                $("#document_modal")
-                    .removeClass("animated fadeOut")
-                    .css("display","block")
-                    .addClass("animated fadeIn")
-                $("#document_modal div.modal_box_container")
-                    .addClass("animated bounceInDown")
-                    .one('animationend', function(){
-                        $(this).css("animation-delay","0ms");
-                        $("#document_modal").css("animation-delay","100ms");
-                        $("#document_modal iframe.content_documents").attr("src",link);
-                    });
-
-            }
-            var close_modal = function(){
-                $("#document_modal iframe.content_documents").attr("src","");
-                $("#document_modal div.modal_box_container")
-                .removeClass("animated bounceInDown")
-                .addClass("animated fadeOutUp")
-                $("#document_modal")
-                    .removeClass("animated fadeIn")
-                    .addClass("animated fadeOut")
-                    .one('animationend', function(){
-                        $(this).css("display","none");
-                        $(this).css("animation-delay","0ms");
-                        $("body").css("overflow","auto");
-                    });
-            }
-            $("#copyright a.iframe_link").click(open_modal);
-            $("#document_modal [role='close']").click(close_modal);
-        });
-    </script>
 </body>
 </html>

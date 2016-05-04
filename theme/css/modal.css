@@ -1,9 +1,20 @@
 div.fullscreen_overlay{width:100%;height:100%;position:fixed;left:0;top:0;text-align:center;background-color:rgba(0,0,0,0.5);z-index:999999999;padding:15px;overflow-y:auto;display:none;animation-duration:800ms !important;}
-div.fullscreen_overlay div.modal_box_container{display:inline-block;background-color:#fff;margin-top:50px;border-radius:8px;-webkit-box-shadow:2px 2px 30px 2px rgba(0,0,0,0.75);-moz-box-shadow:2px 2px 30px 2px rgba(0,0,0,0.75);box-shadow:2px 2px 30px 2px rgba(0,0,0,0.75);animation-duration:800ms;animation-delay:0ms;}
+/*div.fullscreen_overlay div.modal_box_container{display:inline-block;background-color:#fff;margin-top:50px;border-radius:8px;-webkit-box-shadow:2px 2px 30px 2px rgba(0,0,0,0.75);-moz-box-shadow:2px 2px 30px 2px rgba(0,0,0,0.75);box-shadow:2px 2px 30px 2px rgba(0,0,0,0.75);animation-duration:800ms;animation-delay:0ms;}*/
 div.fullscreen_overlay div.modal_box_container div.modal-header{text-align:left;color:#617741;border-bottom:1px solid #617741;overflow:auto;}
 div.fullscreen_overlay div.modal_box_container div.modal-header button{color:#617741;}
 div.fullscreen_overlay div.modal_box_container div.modal-body{background-color:#E4E9D4;}
 div.fullscreen_overlay div.modal_box_container .modal-footer{border-top:1px solid #617741;}
+div.fullscreen_overlay div.modal_box_container {
+    display: inline-block;
+    background-color: #fff;
+    margin-top: 50px;
+    border-radius: 8px;
+    -webkit-box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 30px 2px rgba(0,0,0,0.75);
+    animation-duration: .8s;
+    animation-delay: 0s;
+}
 #document_modal div.modal-body{margin:0 !important;padding:0 !important;}
 #document_modal div.loader{width:100%;height:100%;background-image:url("../images/ajaxload.gif");background-repeat:no-repeat;background-position:center center;position:absolute;left:0;top:0;}
 #document_modal iframe{width:700px;height:300px;border-style:none;}
