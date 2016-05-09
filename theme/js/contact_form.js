@@ -136,7 +136,8 @@
                     }
                 $.ajax({
                     type : "post",
-                    url : "https://zapier.com/hooks/catch/32f0bd/",
+                    //url : "https://zapier.com/hooks/catch/32f0bd/",
+                    url : "https://zapier.com/hooks/catch/53519/u5df4e/",
                     data : details,
                     success : function(response) {
                         if(response.status == "success") {
